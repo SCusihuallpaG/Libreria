@@ -22,6 +22,7 @@ namespace WebAppLibreria
         {
             TipoProductoDAO daoT = new TipoProductoDAO();
             var listado = daoT.ListarTodos();
+            this.gv1.DataSource = listado;
             this.gvTipoProductos.DataSource = listado;
             this.DataBind();
         }

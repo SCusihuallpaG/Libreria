@@ -103,7 +103,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dominio\Cliente.cs" />
+    <Compile Include="Dominio\Distrito.cs" />
+    <Compile Include="Dominio\Empleado.cs" />
     <Compile Include="Dominio\Marca.cs" />
+    <Compile Include="Dominio\Producto.cs" />
+    <Compile Include="Dominio\TipoDocumento.cs" />
     <Compile Include="Dominio\TipoProducto.cs" />
     <Compile Include="FrmCrearTipoProducto.aspx.cs">
       <DependentUpon>FrmCrearTipoProducto.aspx</DependentUpon>
