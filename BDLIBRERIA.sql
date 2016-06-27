@@ -47,7 +47,9 @@ GO
 CREATE TABLE Boleta(
 BoletaID int Identity(1,1) not null primary key,
 EmpleadoID int not null,
-ClienteID int not null
+ClienteID int not null,
+Fecha datetime not null,
+Observacion text
 )
 GO
 
@@ -58,7 +60,7 @@ MarcaID int not null,
 Precio decimal(5,2) not null,
 Stock int not null,
 Foto image,
-TipoProdId int not null
+TipoProductoID int not null
 )
 GO
 
@@ -68,13 +70,12 @@ BoletaID int not null,
 IGV decimal(3,2) not null,
 Cantidad int not null,
 Precio decimal(5,2) not null,
-total decimal(9,2) not null,
 primary key (ProductoID,BoletaID)
 )
 GO
 
 CREATE TABLE TipoProducto(
-TipoProdID int Identity not null primary key,
+TipoProductoID int Identity not null primary key,
 Codigo varchar(5) Unique not null,
 Nombre varchar(30),
 Descripcion varchar(60) not null
@@ -84,6 +85,24 @@ GO
 CREATE TABLE Marca(
 MarcaID int Identity not null primary key,
 Nombre varchar(30),
+)
+GO
+
+CREATE TABLE Pedido(
+PedidoID int Identity not null primary key,
+Fecha datetime not null,
+Observacion text ,
+ClienteID int not null
+)
+GO
+
+CREATE TABLE DetallePedido(
+PedidoID int not null,
+ProductoID int not null,
+IGV decimal(3,2) not null,
+Cantidad int not null,
+Precio decimal(5,2) not null,
+primary key (ProductoID,PedidoID)
 )
 GO
 
@@ -119,8 +138,8 @@ GO
 
 ALTER TABLE Producto
 add constraint fk_Producto_tipo
-foreign key (TipoProdId)
-references TipoProducto(TipoProdId)
+foreign key (TipoProductoID)
+references TipoProducto(TipoProductoID)
 GO
 
 ALTER TABLE Producto
@@ -140,6 +159,24 @@ ALTER TABLE DetalleBoleta
 add constraint fk_detalle_Producto
 foreign key (ProductoID)
 references Producto(ProductoID)
+GO
+
+ALTER TABLE Pedido
+add constraint fk_Pedido_Cliente
+foreign key (ClienteID)
+references Cliente(ClienteID)
+GO
+
+ALTER TABLE DetallePedido
+add constraint fk_DetPedido_Producto
+foreign key (ProductoID)
+references Producto(ProductoID)
+GO
+
+ALTER TABLE DetallePedido
+add constraint fk_DetEPedido_Pedido
+foreign key (PedidoID)
+references Pedido(PedidoID)
 GO
 
 INSERT INTO Distrito VALUES ('LIMA')

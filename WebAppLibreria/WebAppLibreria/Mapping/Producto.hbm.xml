@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="WebAppLibreria"
+                   namespace="WebAppLibreria.Dominio"
+                   default-lazy="false">
+  <class name="Producto" table="Producto">
+    <id name="Id" access="property" column="ProductoID">
+      <generator class="native" />
+    </id>
+    <property name="Nombre" column="Nombre" />
+    <many-to-one name="Marca" column="Marca"/>
+    <property name="Precio" column="Precio" />
+    <property name="Stock" column="Stock" />
+    <property name="Foto" column="Foto" length="2147483647" />
+    <many-to-one name="TipoProducto" column="TipoProductoID"/>
+  </class>
+</hibernate-mapping>
