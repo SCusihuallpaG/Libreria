@@ -130,8 +130,8 @@ IGV decimal(3,2) not null,
 Cantidad int not null,
 Precio decimal(5,2) not null,
 primary key (ProductoID,PedidoID),
-constraint fk_DetPedido_Producto foreign key (ProductoID) references Producto(ProductoID)
---constraint fk_DetEPedido_Pedido foreign key (PedidoID) references Pedido(PedidoID)
+constraint fk_DetPedido_Producto foreign key (ProductoID) references Producto(ProductoID),
+constraint fk_DetEPedido_Pedido foreign key (PedidoID) references Pedido(PedidoID)
 )
 GO
 
@@ -164,7 +164,7 @@ insert into Usuario values ('U0007','SuperMari','678')
 insert into Usuario values ('U0008','HurMonica','789')
 insert into Usuario values ('U0009','Oscarcito','891')
 insert into Usuario values ('U0010','Pedrito','912')
-insert into Usuario values ('U0011','MarioZumu','101')
+
 
 
 Select *  from Usuario
@@ -205,7 +205,7 @@ insert into Cliente values('Mariela','Alveda','Villar','AV.Huylas 120','14567878
 insert into Cliente values('Monica','Hurtado','Espinoza','AV.Las Gaviotas 145','1963267891','U0008',null,5)
 insert into Cliente values('Oscar','Rojas','Molina','AV.Los Manzanales 854','1944567891','U0009',2,6)
 insert into Cliente values('Pedro','Alcala','Muñoz','Jr.Los Palcos 192','1951267891','U0010',null,7)
-insert into Cliente values('Mario','Zamudio','Arriola','Jr.13 de Agosto 689','1975667891','U0011',3,8)
+
 
 
 SELECT * FROM Cliente
