@@ -17,14 +17,6 @@ Descripcion varchar(20) not null
 )
 GO
 
-CREATE TABLE TipoProducto(
-TipoProdID int Identity not null primary key,
-Codigo varchar(5) Unique not null,
-Nombre varchar(30),
-Descripcion varchar(60) not null,
-SubTipoPro int,
-)
-GO
 
 CREATE TABLE TipoDocumento(
 TipoDocumentoID int Identity(1,1) not null primary key,
@@ -45,6 +37,15 @@ NombreDist varchar(50),
 )
 GO
 
+CREATE TABLE TipoProducto(
+TipoProdID int Identity not null primary key,
+Codigo varchar(5) Unique not null,
+Nombre varchar(30),
+Descripcion varchar(60) not null,
+SubTipoPro int,
+constraint  fk_Tipo_producto foreign key(SubTipoPro) references TipoProducto
+)
+GO
 
 CREATE TABLE Empleado(
 EmpleadoID int Identity(1,1) not null primary key,
@@ -164,13 +165,13 @@ INSERT INTO Distrito VALUES ('MAGDALENA')
 
 Select *  from Distrito
 
-INSERT INTO TipoProducto VALUES ('TP001','Oficina','asdasdsad')
-INSERT INTO TipoProducto VALUES ('TP002','Escolares','asdasdsad')
-INSERT INTO TipoProducto VALUES ('TP003','Arte','asdasdsad')
-INSERT INTO TipoProducto VALUES ('TP004','Computación','asdasdsad')
-INSERT INTO TipoProducto VALUES ('TP005','Electrónica','asdasdsad')
-INSERT INTO TipoProducto VALUES ('TP006','Manualidades','asdasdsad')
-INSERT INTO TipoProducto VALUES ('TP007','Regalería','asdasdsad')
+INSERT INTO TipoProducto VALUES ('TP001','Oficina','asdasdsad',null)
+INSERT INTO TipoProducto VALUES ('TP002','Escolares','asdasdsad',null)
+INSERT INTO TipoProducto VALUES ('TP003','Arte','asdasdsad',null)
+INSERT INTO TipoProducto VALUES ('TP004','Computación','asdasdsad',null)
+INSERT INTO TipoProducto VALUES ('TP005','Electrónica','asdasdsad',null)
+INSERT INTO TipoProducto VALUES ('TP006','Manualidades','asdasdsad',2)
+INSERT INTO TipoProducto VALUES ('TP007','Regalería','asdasdsad',null)
 
 Select *  from TipoProducto
 
