@@ -5,11 +5,9 @@ using System.Web;
 
 namespace WebAppLibreria.Dominio
 {
-    public class Marca
+    public class TipoDocumento
     {
         public int Id { get; set; }
-        public string Codigo { get; set; }
-        public string Nombre { get; set; }
         public string Descripcion { get; set; }
     }
 }

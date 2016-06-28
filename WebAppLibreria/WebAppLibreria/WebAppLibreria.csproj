@@ -77,9 +77,20 @@
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="FrmCrearMarca.aspx" />
+    <Content Include="FrmCrearProducto.aspx" />
     <Content Include="FrmMarca.aspx" />
     <Content Include="Imagen\IC82740.png" />
     <EmbeddedResource Include="Mapping\Marca.hbm.xml" />
+    <Content Include="Mapping\Boleta.hbm.xml" />
+    <Content Include="Mapping\Cliente.hbm.xml" />
+    <Content Include="Mapping\DetalleBoleta.hbm.xml" />
+    <Content Include="Mapping\DetallePedido.hbm.xml" />
+    <Content Include="Mapping\Distrito.hbm.xml" />
+    <Content Include="Mapping\Empleado.hbm.xml" />
+    <Content Include="Mapping\Pedido.hbm.xml" />
+    <Content Include="Mapping\Producto.hbm.xml" />
+    <Content Include="Mapping\TipoDocumento.hbm.xml" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
@@ -103,8 +114,31 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dominio\Boleta.cs" />
+    <Compile Include="Dominio\Cliente.cs" />
+    <Compile Include="Dominio\DetalleBoleta.cs" />
+    <Compile Include="Dominio\DetallePedido.cs" />
+    <Compile Include="Dominio\Distrito.cs" />
+    <Compile Include="Dominio\Empleado.cs" />
     <Compile Include="Dominio\Marca.cs" />
+    <Compile Include="Dominio\Pedido.cs" />
+    <Compile Include="Dominio\Producto.cs" />
+    <Compile Include="Dominio\TipoDocumento.cs" />
     <Compile Include="Dominio\TipoProducto.cs" />
+    <Compile Include="FrmCrearMarca.aspx.cs">
+      <DependentUpon>FrmCrearMarca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmCrearMarca.aspx.designer.cs">
+      <DependentUpon>FrmCrearMarca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearProducto.aspx.cs">
+      <DependentUpon>FrmCrearProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmCrearProducto.aspx.designer.cs">
+      <DependentUpon>FrmCrearProducto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FrmCrearTipoProducto.aspx.cs">
       <DependentUpon>FrmCrearTipoProducto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -130,9 +164,16 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Persistencia\BaseDAO.cs" />
+    <Compile Include="Persistencia\BoletaDAO.cs" />
+    <Compile Include="Persistencia\ClienteDAO.cs" />
     <Compile Include="Persistencia\ConexionUtil.cs" />
+    <Compile Include="Persistencia\DistritoDAO.cs" />
+    <Compile Include="Persistencia\EmpleadoDAO.cs" />
     <Compile Include="Persistencia\MarcaDAO.cs" />
     <Compile Include="Persistencia\NHibernateHelper.cs" />
+    <Compile Include="Persistencia\PedidoDAO.cs" />
+    <Compile Include="Persistencia\ProductoDAO.cs" />
+    <Compile Include="Persistencia\TipoDocumentoDAO.cs" />
     <Compile Include="Persistencia\TipoProductoDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

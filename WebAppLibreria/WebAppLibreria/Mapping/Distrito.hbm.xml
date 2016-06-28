@@ -3,12 +3,10 @@
                    assembly="WebAppLibreria"
                    namespace="WebAppLibreria.Dominio"
                    default-lazy="false">
-  <class name="Marca" table="Marca">
-    <id name="Id" access="property" column="MarcaID">
+  <class name="Distrito" table="Distrito">
+    <id name="Id" access="property" column="DistritoID">
       <generator class="native" />
     </id>
-    <property name="Codigo" column="CodigoMarca" />
-    <property name="Nombre" column="Nombre" />
-    <property name="Descripcion" column="Descripcion" />
+    <property name="Nombre" column="NombreDist" />
   </class>
 </hibernate-mapping>

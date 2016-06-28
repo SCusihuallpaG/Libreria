@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FrmCrearTipoProducto.aspx.cs" Inherits="WebAppLibreria.FrmTipoProducto" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FrmCrearMarca.aspx.cs" Inherits="WebAppLibreria.FrmCrearMarca" %>
 
 <!DOCTYPE html>
 

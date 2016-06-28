@@ -11,6 +11,7 @@ Contrasena char(3)not null
 )
 GO
 
+<<<<<<< HEAD
 CREATE TABLE TipoEmpleado(
 TipoEmpleadoID int Identity(1,1) not null primary key,
 Descripcion varchar(20) unique  not null
@@ -50,6 +51,12 @@ GO
 CREATE TABLE Empleado(
 EmpleadoID int Identity(1,1) not null primary key,
 TipoEmpleadoID int not null,
+=======
+CREATE TABLE Empleado(
+EmpleadoID int Identity(1,1) not null primary key,
+CodigoEmpleado varchar(20) unique not null,
+Clave varchar(20) not null, 
+>>>>>>> origin/master
 Nombre varchar(50) not null,
 ApellidoPaterno varchar(50) not null,
 ApellidoMaterno varchar(50) not null,
@@ -72,12 +79,25 @@ ApellidoPaterno varchar(50) not null,
 ApellidoMaterno varchar(50) not null,
 Direccion varchar(150) not null,
 Telefono varchar(10) not null,
+<<<<<<< HEAD
 Usuario char(5) not null unique ,
 TipoDocumentoID int,
 DistritoID int not null,
 constraint  fk_Distrito_cliente foreign key(DistritoID) references Distrito(DistritoID),
 constraint  fk_TipoDocumento_cliente foreign key(TipoDocumentoID) references TipoDocumento(TipoDocumentoID),
 constraint  fk_Usuario_Cliente foreign key(Usuario) references Usuario(Usuario)
+=======
+Usuario varchar(20)unique not null,
+Clave varchar(20) not null,
+TipoDocumentoID int not null,
+DistritoID int not null
+)
+GO
+
+CREATE TABLE TipoDocumento(
+TipoDocumentoID int Identity(1,1) not null primary key,
+Descripcion varchar(30) not null
+>>>>>>> origin/master
 )
 GO
 
@@ -85,12 +105,17 @@ CREATE TABLE Boleta(
 BoletaID int Identity(1,1) not null primary key,
 EmpleadoID int not null,
 ClienteID int not null,
+<<<<<<< HEAD
 constraint fk_Boleta_cliente
 foreign key(EmpleadoID)
 references Empleado(EmpleadoID),
 constraint  fk_Cliente_Boleta
 foreign key(ClienteID)
 references Cliente(ClienteID)
+=======
+Fecha datetime not null,
+Observacion text
+>>>>>>> origin/master
 )
 GO
 
@@ -101,6 +126,7 @@ MarcaID int not null,
 Precio decimal(5,2) not null,
 Stock int not null,
 Foto image,
+<<<<<<< HEAD
 TipoProdId int not null,
 constraint fk_Producto_tipo
 foreign key (TipoProdId)
@@ -108,6 +134,9 @@ references TipoProducto(TipoProdId),
 constraint fk_Producto_Marca
 foreign key (MarcaID)
 references Marca(MarcaID)
+=======
+TipoProductoID int not null
+>>>>>>> origin/master
 )
 GO
 
@@ -117,6 +146,7 @@ BoletaID int not null,
 IGV decimal(3,2) not null,
 Cantidad int not null,
 Precio decimal(5,2) not null,
+<<<<<<< HEAD
 total decimal(9,2) not null,
 primary key (ProductoID,BoletaID),
 constraint fk_detalle_Boleta
@@ -141,9 +171,80 @@ insert into Usuario values ('U0008','HurMonica','789')
 insert into Usuario values ('U0009','Oscarcito','891')
 insert into Usuario values ('U0010','Pedrito','912')
 insert into Usuario values ('U0011','MarioZumu','101')
+=======
+primary key (ProductoID,BoletaID)
+)
+GO
+
+CREATE TABLE TipoProducto(
+TipoProductoID int Identity not null primary key,
+CodigoTipoProducto varchar(5) Unique not null,
+Nombre varchar(30) not null,
+Descripcion varchar(60) null
+)
+GO
+
+CREATE TABLE Marca(
+MarcaID int Identity not null primary key,
+CodigoMarca varchar(5) unique not null,
+Nombre varchar(30) not null,
+Descripcion varchar(60) null
+)
+GO
+
+CREATE TABLE Pedido(
+PedidoID int Identity not null primary key,
+Fecha datetime not null,
+Observacion text ,
+ClienteID int not null
+)
+GO
+
+CREATE TABLE DetallePedido(
+PedidoID int not null,
+ProductoID int not null,
+IGV decimal(3,2) not null,
+Cantidad int not null,
+Precio decimal(5,2) not null,
+primary key (ProductoID,PedidoID)
+)
+GO
+
+ALTER TABLE Boleta
+add constraint fk_Boleta_cliente
+foreign key(EmpleadoID)
+references Empleado(EmpleadoID)
+GO
+
+ALTER TABLE Cliente
+add constraint  fk_Distrito_cliente
+foreign key(DistritoID)
+references Distrito(DistritoID)
+GO
+
+ALTER TABLE Cliente
+add constraint  fk_TipoDocumento_cliente
+foreign key(TipoDocumentoID)
+references TipoDocumento(TipoDocumentoID)
+GO
+
+ALTER TABLE Empleado
+add constraint  fk_Distrito_Empleado
+foreign key(DistritoID)
+references Distrito(DistritoID)
+GO
+>>>>>>> origin/master
 
 
+<<<<<<< HEAD
 Select *  from Usuario
+=======
+ALTER TABLE Producto
+add constraint fk_Producto_tipo
+foreign key (TipoProductoID)
+references TipoProducto(TipoProductoID)
+GO
+>>>>>>> origin/master
 
 
 INSERT INTO TipoEmpleado VALUES ('Administrador')
@@ -152,6 +253,27 @@ INSERT INTO TipoEmpleado VALUES ('Vendedor')
 Select *  from TipoEmpleado
 
 
+<<<<<<< HEAD
+=======
+ALTER TABLE Pedido
+add constraint fk_Pedido_Cliente
+foreign key (ClienteID)
+references Cliente(ClienteID)
+GO
+
+ALTER TABLE DetallePedido
+add constraint fk_DetPedido_Producto
+foreign key (ProductoID)
+references Producto(ProductoID)
+GO
+
+ALTER TABLE DetallePedido
+add constraint fk_DetEPedido_Pedido
+foreign key (PedidoID)
+references Pedido(PedidoID)
+GO
+
+>>>>>>> origin/master
 INSERT INTO Distrito VALUES ('LIMA')
 INSERT INTO Distrito VALUES ('VMT')
 INSERT INTO Distrito VALUES ('VES')
@@ -162,6 +284,7 @@ INSERT INTO Distrito VALUES ('MIRAFLORES')
 INSERT INTO Distrito VALUES ('CHORRILLOS')
 INSERT INTO Distrito VALUES ('MAGDALENA')
 
+<<<<<<< HEAD
 Select *  from Distrito
 
 
@@ -219,3 +342,30 @@ SELECT * FROM Producto
 INSERT INTO DetalleBoleta VALUES ('','','','','','')
 
 SELECT * FROM DetalleBoleta
+=======
+INSERT INTO Marca VALUES ('M001','JUSTUS','')
+GO
+INSERT INTO Marca VALUES ('M002','LORO','')
+GO
+
+INSERT INTO TipoProducto VALUES ('TP001','Oficina','asdasdsad')
+GO
+INSERT INTO TipoProducto VALUES ('TP002','Escolares','asdasdsad')
+GO
+INSERT INTO TipoProducto VALUES ('TP003','Arte','asdasdsad')
+GO
+INSERT INTO TipoProducto VALUES ('TP004','Computación','asdasdsad')
+GO
+INSERT INTO TipoProducto VALUES ('TP005','Electrónica','asdasdsad')
+GO
+INSERT INTO TipoProducto VALUES ('TP006','Manualidades','asdasdsad')
+GO
+INSERT INTO TipoProducto VALUES ('TP007','Regalería','asdasdsad')
+GO
+
+INSERT INTO Empleado VALUES('EMP01','123456','Samuel','Cusihuallpa','Guillen',3000,'Av. Simon Bolivar','2833029',1)
+GO
+INSERT INTO Empleado VALUES('EMP02','123','Danilo','Zamudio','XD!',2000,'Av. Lurin','4257821',3)
+GO
+
+>>>>>>> origin/master

@@ -5,11 +5,11 @@ using System.Web;
 
 namespace WebAppLibreria.Dominio
 {
-    public class Marca
+    public class Pedido
     {
         public int Id { get; set; }
-        public string Codigo { get; set; }
-        public string Nombre { get; set; }
-        public string Descripcion { get; set; }
+        public DateTime FechaPedido { get; set; }
+        public string Observacion { get; set; }
+        public Cliente Cliente { get; set; }
     }
 }
