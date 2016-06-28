@@ -24,16 +24,16 @@ ruc varchar(10) not null
 )
 GO
 
-CREATE TABLE Marca(
-MarcaID int Identity not null primary key,
-Nombre varchar(30),
-)
-GO
-
 
 CREATE TABLE Distrito(
 DistritoID int Identity(1,1) not null primary key,
 NombreDist varchar(50),
+)
+GO
+
+CREATE TABLE Marca(
+MarcaID int Identity not null primary key,
+Nombre varchar(30),
 )
 GO
 
@@ -151,8 +151,6 @@ INSERT INTO TipoEmpleado VALUES ('Vendedor')
 
 Select *  from TipoEmpleado
 
---Delete from TipoEmpleado
-
 
 INSERT INTO Distrito VALUES ('LIMA')
 INSERT INTO Distrito VALUES ('VMT')
@@ -166,15 +164,7 @@ INSERT INTO Distrito VALUES ('MAGDALENA')
 
 Select *  from Distrito
 
-INSERT INTO TipoProducto VALUES ('TP001','Oficina','asdasdsad',null)
-INSERT INTO TipoProducto VALUES ('TP002','Escolares','asdasdsad',null)
-INSERT INTO TipoProducto VALUES ('TP003','Arte','asdasdsad',null)
-INSERT INTO TipoProducto VALUES ('TP004','Computación','asdasdsad',null)
-INSERT INTO TipoProducto VALUES ('TP005','Electrónica','asdasdsad',null)
-INSERT INTO TipoProducto VALUES ('TP006','Manualidades','asdasdsad',2)
-INSERT INTO TipoProducto VALUES ('TP007','Regalería','asdasdsad',null)
 
-Select *  from TipoProducto
 
 INSERT INTO Empleado VALUES(1,'Samuel','Cusihuallpa','Guillen',100.1,'Av. Simon Bolivar','2833029','U0001',1)
 INSERT INTO Empleado VALUES(1,'Danilo','Zamudio','Arevalo XD!',2000,'Av. Lurin','4257821','U0002',3)
@@ -199,3 +189,33 @@ insert into Cliente values('Mario','Zamudio','Arriola','Jr.13 de Agosto 689','19
 
 SELECT * FROM Cliente
 
+INSERT INTO Marca VALUES ('')
+
+SELECT * FROM Marca
+
+INSERT INTO TipoProducto VALUES ('TP001','Oficina','asdasdsad',null)
+INSERT INTO TipoProducto VALUES ('TP002','Escolares','asdasdsad',null)
+INSERT INTO TipoProducto VALUES ('TP003','Arte','asdasdsad',null)
+INSERT INTO TipoProducto VALUES ('TP004','Computación','asdasdsad',null)
+INSERT INTO TipoProducto VALUES ('TP005','Electrónica','asdasdsad',null)
+INSERT INTO TipoProducto VALUES ('TP006','Manualidades','asdasdsad',2)
+INSERT INTO TipoProducto VALUES ('TP007','Regalería','asdasdsad',null)
+
+Select *  from TipoProducto
+
+
+--Boleta
+INSERT INTO Boleta VALUES ('','')
+
+SELECT * FROM Boleta
+
+--Producto
+
+INSERT INTO Producto VALUES ('','','','','','')
+
+SELECT * FROM Producto
+
+--DetalleBoleta
+INSERT INTO DetalleBoleta VALUES ('','','','','','')
+
+SELECT * FROM DetalleBoleta
