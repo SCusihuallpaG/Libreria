@@ -7,6 +7,8 @@
     <id name="Id" access="property" column="MarcaID">
       <generator class="native" />
     </id>
+    <property name="Codigo" column="CodigoMarca" />
     <property name="Nombre" column="Nombre" />
+    <property name="Descripcion" column="Descripcion" />
   </class>
 </hibernate-mapping>

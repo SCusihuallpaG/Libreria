@@ -77,6 +77,8 @@
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="FrmCrearMarca.aspx" />
+    <Content Include="FrmCrearProducto.aspx" />
     <Content Include="FrmMarca.aspx" />
     <Content Include="Imagen\IC82740.png" />
     <EmbeddedResource Include="Mapping\Marca.hbm.xml" />
@@ -123,6 +125,20 @@
     <Compile Include="Dominio\Producto.cs" />
     <Compile Include="Dominio\TipoDocumento.cs" />
     <Compile Include="Dominio\TipoProducto.cs" />
+    <Compile Include="FrmCrearMarca.aspx.cs">
+      <DependentUpon>FrmCrearMarca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmCrearMarca.aspx.designer.cs">
+      <DependentUpon>FrmCrearMarca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearProducto.aspx.cs">
+      <DependentUpon>FrmCrearProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmCrearProducto.aspx.designer.cs">
+      <DependentUpon>FrmCrearProducto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FrmCrearTipoProducto.aspx.cs">
       <DependentUpon>FrmCrearTipoProducto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

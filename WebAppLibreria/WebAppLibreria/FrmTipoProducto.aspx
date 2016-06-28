@@ -38,8 +38,6 @@
     
     </div>
         <asp:HyperLink ID="HlAgregar" runat="server" NavigateUrl="~/FrmCrearTipoProducto.aspx">Agregar TipoProducto</asp:HyperLink>
-        <asp:GridView ID="gv1" runat="server">
-        </asp:GridView>
     </form>
 </body>
 </html>

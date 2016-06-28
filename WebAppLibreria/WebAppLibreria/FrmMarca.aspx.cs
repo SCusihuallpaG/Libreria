@@ -23,8 +23,6 @@ namespace WebAppLibreria
             var listado = daoM.ListarTodos();
             this.gvMarcas.DataSource = listado;
             this.DataBind();
-            this.dlMarca.DataSource = listado;
-            this.DataBind();
         }
 
     }

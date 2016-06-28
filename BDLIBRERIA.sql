@@ -76,15 +76,17 @@ GO
 
 CREATE TABLE TipoProducto(
 TipoProductoID int Identity not null primary key,
-Codigo varchar(5) Unique not null,
-Nombre varchar(30),
-Descripcion varchar(60) not null
+CodigoTipoProducto varchar(5) Unique not null,
+Nombre varchar(30) not null,
+Descripcion varchar(60) null
 )
 GO
 
 CREATE TABLE Marca(
 MarcaID int Identity not null primary key,
-Nombre varchar(30),
+CodigoMarca varchar(5) unique not null,
+Nombre varchar(30) not null,
+Descripcion varchar(60) null
 )
 GO
 
@@ -198,9 +200,9 @@ GO
 INSERT INTO Distrito VALUES ('MAGDALENA')
 GO
 
-INSERT INTO Marca VALUES ('JUSTUS')
+INSERT INTO Marca VALUES ('M001','JUSTUS','')
 GO
-INSERT INTO Marca VALUES ('LORO')
+INSERT INTO Marca VALUES ('M002','LORO','')
 GO
 
 INSERT INTO TipoProducto VALUES ('TP001','Oficina','asdasdsad')

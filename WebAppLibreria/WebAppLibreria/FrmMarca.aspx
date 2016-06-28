@@ -34,8 +34,6 @@
 
     </div>
         <asp:HyperLink ID="hlAgregar" runat="server">Agregar Marca</asp:HyperLink>
-        <asp:DataList ID="dlMarca" runat="server">
-        </asp:DataList>
     </form>
 </body>
 </html>
