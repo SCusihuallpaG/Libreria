@@ -21,7 +21,8 @@ CREATE TABLE TipoProducto(
 TipoProdID int Identity not null primary key,
 Codigo varchar(5) Unique not null,
 Nombre varchar(30),
-Descripcion varchar(60) not null
+Descripcion varchar(60) not null,
+SubTipoPro int,
 )
 GO
 
@@ -36,6 +37,7 @@ MarcaID int Identity not null primary key,
 Nombre varchar(30),
 )
 GO
+
 
 CREATE TABLE Distrito(
 DistritoID int Identity(1,1) not null primary key,
@@ -70,7 +72,7 @@ ApellidoMaterno varchar(50) not null,
 Direccion varchar(150) not null,
 Telefono varchar(10) not null,
 Usuario char(5) not null unique,
-TipoDocumentoID int not null,
+TipoDocumentoID int ,
 DistritoID int not null,
 constraint  fk_Distrito_cliente foreign key(DistritoID) references Distrito(DistritoID),
 constraint  fk_TipoDocumento_cliente foreign key(TipoDocumentoID) references TipoDocumento(TipoDocumentoID),
@@ -124,6 +126,7 @@ foreign key (ProductoID)
 references Producto(ProductoID)
 )
 GO
+
 --Admi
 insert into Usuario values ('U0001','Samu','123')
 insert into Usuario values ('U0002','Dani','234')
@@ -131,13 +134,15 @@ insert into Usuario values ('U0003','CGloria','345')
 --clientes
 insert into Usuario values ('U0004','pJuan','456')
 insert into Usuario values ('U0005','JoseSala','567')
-insert into Usuario values ('U0006','SuperMari','678')
-insert into Usuario values ('U0007','HurMonica','789')
-insert into Usuario values ('U0008','','891')
-insert into Usuario values ('U0009','','912')
-insert into Usuario values ('U0010','','101')
-insert into Usuario values ('U0011','','102')
+insert into Usuario values ('U0006','Sabri','102')
+insert into Usuario values ('U0007','SuperMari','678')
+insert into Usuario values ('U0008','HurMonica','789')
+insert into Usuario values ('U0009','Oscarcito','891')
+insert into Usuario values ('U0010','Pedrito','912')
+insert into Usuario values ('U0011','MarioZumu','101')
 
+
+Select *  from Usuario
 
 
 INSERT INTO TipoEmpleado VALUES ('Administrador')
