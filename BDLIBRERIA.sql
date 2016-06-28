@@ -13,14 +13,14 @@ GO
 
 CREATE TABLE TipoEmpleado(
 TipoEmpleadoID int Identity(1,1) not null primary key,
-Descripcion varchar(20) not null
+Descripcion varchar(20) unique  not null
 )
 GO
 
 
 CREATE TABLE TipoDocumento(
 TipoDocumentoID int Identity(1,1) not null primary key,
-Descripcion varchar(30) not null
+ruc varchar(10) not null
 )
 GO
 
@@ -72,8 +72,8 @@ ApellidoPaterno varchar(50) not null,
 ApellidoMaterno varchar(50) not null,
 Direccion varchar(150) not null,
 Telefono varchar(10) not null,
-Usuario char(5) not null unique,
-TipoDocumentoID int ,
+Usuario char(5) not null unique ,
+TipoDocumentoID int,
 DistritoID int not null,
 constraint  fk_Distrito_cliente foreign key(DistritoID) references Distrito(DistritoID),
 constraint  fk_TipoDocumento_cliente foreign key(TipoDocumentoID) references TipoDocumento(TipoDocumentoID),
@@ -147,10 +147,11 @@ Select *  from Usuario
 
 
 INSERT INTO TipoEmpleado VALUES ('Administrador')
-INSERT INTO TipoEmpleado VALUES ('Administrador')
 INSERT INTO TipoEmpleado VALUES ('Vendedor')
 
 Select *  from TipoEmpleado
+
+--Delete from TipoEmpleado
 
 
 INSERT INTO Distrito VALUES ('LIMA')
@@ -175,18 +176,26 @@ INSERT INTO TipoProducto VALUES ('TP007','Regalería','asdasdsad',null)
 
 Select *  from TipoProducto
 
-INSERT INTO Empleado VALUES(1,'EMP01','Samuel','Cusihuallpa','Guillen',100.1,'Av. Simon Bolivar','2833029',1)
-INSERT INTO Empleado VALUES(2,'EMP02','Danilo','Zamudio','Arevalo XD!',2000,'Av. Lurin','4257821',3)
+INSERT INTO Empleado VALUES(1,'Samuel','Cusihuallpa','Guillen',100.1,'Av. Simon Bolivar','2833029','U0001',1)
+INSERT INTO Empleado VALUES(1,'Danilo','Zamudio','Arevalo XD!',2000,'Av. Lurin','4257821','U0002',3)
 
+Select *  from Empleado
 
-insert into Cliente values('C0001','Perez Quispe','Juan','AV.28 de Julio 168')
-insert into Cliente values('C0002','Salazar Magariño','Jose','AV.Los Faisanes 180')
-insert into Cliente values('C0003','Dominguez Rodriguez','Sabrina','AV.Guardia civil 171')
-insert into Cliente values('C0004','Alveda Villar','Mariela','AV.Huylas 120')
-insert into Cliente values('C0005','Hurtado Espinoza','Monica','AV.Las Gaviotas 145')
-insert into Cliente values('C0006','Rojas Molina','Oscar','AV.Los Manzanales 854')
-insert into Cliente values('C0007','Alcala Muñoz','Pedro','Jr.Los Palcos 192')
-insert into Cliente values('C0008','Zamudio Arriola','Mario','Jr.13 de Agosto 689')
+INSERT INTO TipoDocumento VALUES ('2345678912')
+INSERT INTO TipoDocumento VALUES ('5678923456')
+INSERT INTO TipoDocumento VALUES ('7863234912')
+
+Select *  from TipoDocumento
+
+insert into Cliente values('Juan','Perez','Quispe','AV.28 de Julio 168','1235657891','U0004',null,9)
+insert into Cliente values('Jose','Salazar','Magariño','AV.Los Faisanes 180','1567567891','U0005',null,2)
+insert into Cliente values('Sabrina','Dominguez','Rodriguez','AV.Guardia civil 171','1296367891','U0006',null,3)
+insert into Cliente values('Mariela','Alveda','Villar','AV.Huylas 120','1456787891','U0007',1,4)
+insert into Cliente values('Monica','Hurtado','Espinoza','AV.Las Gaviotas 145','1963267891','U0008',null,5)
+insert into Cliente values('Oscar','Rojas','Molina','AV.Los Manzanales 854','1944567891','U0009',2,6)
+insert into Cliente values('Pedro','Alcala','Muñoz','Jr.Los Palcos 192','1951267891','U0010',null,7)
+insert into Cliente values('Mario','Zamudio','Arriola','Jr.13 de Agosto 689','1975667891','U0011',3,8)
 
 
 SELECT * FROM Cliente
+
