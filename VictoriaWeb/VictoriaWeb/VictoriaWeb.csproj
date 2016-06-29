@@ -95,6 +95,8 @@
     <Compile Include="Dominio\Distrito.cs" />
     <Compile Include="Dominio\Empleado.cs" />
     <Compile Include="Dominio\Marca.cs" />
+    <Compile Include="Dominio\Pedido.cs" />
+    <Compile Include="Dominio\Producto.cs" />
     <Compile Include="Dominio\TipoDocumento.cs" />
     <Compile Include="Dominio\TipoEmpleado.cs" />
     <Compile Include="Dominio\TipoProducto.cs" />
