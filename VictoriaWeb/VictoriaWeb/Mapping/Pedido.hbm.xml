@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="VictoriaWeb"
+                   namespace="VictoriaWeb.Dominio"
+                   default-lazy="false">
+  <class name="Pedido" table="Pedido">
+    <id name="PedidoID" access="property" column="PedidoID">
+      <generator class="native" />
+    </id>
+    <property name="Fecha" column="Fecha" />
+    <property name="Observacion" column="Observacion" />    
+    <namey-to-one name="ClienteID" column="ClienteID" />
+  </class>
+</hibernate-mapping>

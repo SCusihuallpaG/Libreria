@@ -77,6 +77,13 @@
     <Content Include="Mapping\DetallePedido.hbm.xml" />
     <Content Include="Mapping\Distrito.hbm.xml" />
     <Content Include="Mapping\Empleado.hbm.xml" />
+    <Content Include="Mapping\Marca.hbm.xml" />
+    <Content Include="Mapping\Pedido.hbm.xml" />
+    <Content Include="Mapping\Producto.hbm.xml" />
+    <Content Include="Mapping\TipoDocumento.hbm.xml" />
+    <Content Include="Mapping\TipoEmpleado.hbm.xml" />
+    <Content Include="Mapping\TipoProducto.hbm.xml" />
+    <Content Include="Mapping\Usuario.hbm.xml" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

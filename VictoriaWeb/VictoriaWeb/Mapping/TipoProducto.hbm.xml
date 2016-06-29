@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="VictoriaWeb"
+                   namespace="VictoriaWeb.Dominio"
+                   default-lazy="false">
+  <class name="TipoProducto" table="TipoProducto">
+    <id name="TipoProdID" access="property" column="TipoProdID">
+      <generator class="native" />
+    </id>
+    <property name="CodigoTipoProducto" column="CodigoTipoProducto" />
+    <property name="Nombre" column="Nombre" />
+    <property name="Descripcion" column="Descripcion" />
+    <namey-to-one name="SubTipoPro" column="SubTipoPro" />
+  </class>
+</hibernate-mapping>
