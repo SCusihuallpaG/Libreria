@@ -18,5 +18,6 @@ namespace VictoriaWeb.Dominio
         public Usuario Usuario { get; set; }
         public Distrito DistritoID { get; set; }
 
+
     }
 }
