@@ -94,18 +94,6 @@ constraint fk_Pedido_Cliente foreign key (ClienteID)references Cliente(ClienteID
 GO
 
 
-
-CREATE TABLE Boleta(
-BoletaID int Identity(1,1) not null primary key,
-EmpleadoID int not null,
-ClienteID int not null,
-Fecha datetime not null,
-Observacion text,
-constraint fk_Boleta_Empleado foreign key(EmpleadoID)references Empleado(EmpleadoID),
-constraint  fk_Cliente_Boleta foreign key(ClienteID)references Cliente(ClienteID)
-)
-GO
-
 CREATE TABLE Producto(
 ProductoID int Identity(1,1) not null primary key,
 Nombre varchar(30) not null,
@@ -135,22 +123,6 @@ constraint fk_DetEPedido_Pedido foreign key (PedidoID) references Pedido(PedidoI
 )
 GO
 
-CREATE TABLE DetalleBoleta(
-ProductoID int not null,
-BoletaID int not null,
-IGV decimal(3,2) not null,
-Cantidad int not null,
-Precio decimal(5,2) not null,
-total decimal(9,2) not null,
-primary key (ProductoID,BoletaID),
-constraint fk_detalle_Boleta
-foreign key (BoletaID)
-references Boleta(BoletaID),
-constraint fk_detalle_Producto
-foreign key (ProductoID)
-references Producto(ProductoID)
-)
-GO
 
 --Admi
 insert into Usuario values ('U0001','Samu','123')
@@ -210,7 +182,108 @@ insert into Cliente values('Pedro','Alcala','Muñoz','Jr.Los Palcos 192','1951267
 
 SELECT * FROM Cliente
 
+INSERT INTO Marca VALUES ('STAEDTLER')
+INSERT INTO Marca VALUES ('EISEN')
+--INSERT INTO Marca VALUES ('GENERICO')
+--INSERT INTO Marca VALUES ('LAMY')
+INSERT INTO Marca VALUES ('UNIBALL')
+INSERT INTO Marca VALUES ('PELIKAN')
+INSERT INTO Marca VALUES ('PAPER MATE')
+
+INSERT INTO Marca VALUES ('ARTESCO')
+--INSERT INTO Marca VALUES ('ACRILEX')
+--INSERT INTO Marca VALUES ('ACRIMET')
+--INSERT INTO Marca VALUES ('ADHESIVOS')
+--INSERT INTO Marca VALUES ('AJMECHET')
+--INSERT INTO Marca VALUES ('ALBORADA')
+--INSERT INTO Marca VALUES ('ALIANZA')
+--INSERT INTO Marca VALUES ('AMERICA')
+--INSERT INTO Marca VALUES ('APXER')
+--INSERT INTO Marca VALUES ('ARTE')
+--INSERT INTO Marca VALUES ('AVERY')
+--INSERT INTO Marca VALUES ('BIBERTIME')
+INSERT INTO Marca VALUES ('BIC')
+--INSERT INTO Marca VALUES ('BOLITAS')
+--INSERT INTO Marca VALUES ('BOREAL')
+--INSERT INTO Marca VALUES ('CANON')
+--INSERT INTO Marca VALUES ('CARCEDI')
+--INSERT INTO Marca VALUES ('CASAN')
+INSERT INTO Marca VALUES ('CASIO')
+--INSERT INTO Marca VALUES ('CENTAURO')
+--INSERT INTO Marca VALUES ('CITANOVA')
+--INSERT INTO Marca VALUES ('COMERCIAL')
+--INSERT INTO Marca VALUES ('CONGRESO')
+--INSERT INTO Marca VALUES ('CONVERNOR')
+--INSERT INTO Marca VALUES ('COPY PLUS')
+--INSERT INTO Marca VALUES ('CORONA')
+--INSERT INTO Marca VALUES ('COXI')
+--INSERT INTO Marca VALUES ('CREALINA')
+--INSERT INTO Marca VALUES ('CRESKO')
+--INSERT INTO Marca VALUES ('DASA')
+--INSERT INTO Marca VALUES ('DIAMANT')
+--INSERT INTO Marca VALUES ('DIDDO')
+INSERT INTO Marca VALUES ('DON PAPEL')
+--INSERT INTO Marca VALUES ('DOS BANDERAS')
+--INSERT INTO Marca VALUES ('DOYCO')
+--INSERT INTO Marca VALUES ('DUNSON')
+--INSERT INTO Marca VALUES ('DUOGRAF')
+--INSERT INTO Marca VALUES ('ECOTEX')
+--INSERT INTO Marca VALUES ('EDDING')
+--INSERT INTO Marca VALUES ('EL ATENEO')
+--INSERT INTO Marca VALUES ('EL NENE')
+INSERT INTO Marca VALUES ('EPSON')
+--INSERT INTO Marca VALUES ('ERPA')
+--INSERT INTO Marca VALUES ('ETIDATA')
+INSERT INTO Marca VALUES ('EVAFLEX')
+--INSERT INTO Marca VALUES ('EXITO')
+--INSERT INTO Marca VALUES ('EZCO')
+INSERT INTO Marca VALUES ('FABER CASTELL')
+INSERT INTO Marca VALUES ('UHU')
+INSERT INTO Marca VALUES ('GENIUS')
+INSERT INTO Marca VALUES ('HP')
+INSERT INTO Marca VALUES ('VINIFAN')
+INSERT INTO Marca VALUES ('SCOTCH')
+INSERT INTO Marca VALUES ('PEGAFAN')
+INSERT INTO Marca VALUES ('SHURTAPE')
+INSERT INTO Marca VALUES ('OVE')
+INSERT INTO Marca VALUES ('IMATION')
+INSERT INTO Marca VALUES ('SURCO')
+INSERT INTO Marca VALUES ('COLLEGE')
+INSERT INTO Marca VALUES ('JUSTUS')
+INSERT INTO Marca VALUES ('LORO')
+INSERT INTO Marca VALUES ('GRAPHOS')
+INSERT INTO Marca VALUES ('DAVID')
+INSERT INTO Marca VALUES ('DURACELL')
+INSERT INTO Marca VALUES ('TOSHIBA')
+INSERT INTO Marca VALUES ('NORTON')
+INSERT INTO Marca VALUES ('HASBRO')
+INSERT INTO Marca VALUES ('MATCHBOX')
+INSERT INTO Marca VALUES ('ZIGZAG')
+INSERT INTO Marca VALUES ('MEMORIS')
+INSERT INTO Marca VALUES ('VIKINGO')
+INSERT INTO Marca VALUES ('HALION')
+INSERT INTO Marca VALUES ('STAINL STEEL')
+INSERT INTO Marca VALUES ('ARTI CREATIVO')
+INSERT INTO Marca VALUES ('GENIUS')
+INSERT INTO Marca VALUES ('PLAY-DOH')
+INSERT INTO Marca VALUES ('BARBIE')
+INSERT INTO Marca VALUES ('XEROX')
+INSERT INTO Marca VALUES ('CHAMEX')
 INSERT INTO Marca VALUES ('')
+INSERT INTO Marca VALUES ('')
+INSERT INTO Marca VALUES ('')
+INSERT INTO Marca VALUES ('')
+INSERT INTO Marca VALUES ('')
+INSERT INTO Marca VALUES ('')
+INSERT INTO Marca VALUES ('')
+INSERT INTO Marca VALUES ('')
+INSERT INTO Marca VALUES ('')
+INSERT INTO Marca VALUES ('')
+INSERT INTO Marca VALUES ('')
+INSERT INTO Marca VALUES ('')
+INSERT INTO Marca VALUES ('')
+INSERT INTO Marca VALUES ('')
+
 
 SELECT * FROM Marca
 
@@ -226,9 +299,9 @@ Select *  from TipoProducto
 
 
 --Boleta
-INSERT INTO Boleta VALUES ('','')
+INSERT INTO Pedido VALUES ('','')
 
-SELECT * FROM Boleta
+SELECT * FROM Pedido
 
 --Producto
 
@@ -237,7 +310,7 @@ INSERT INTO Producto VALUES ('','','','','','')
 SELECT * FROM Producto
 
 --DetalleBoleta
-INSERT INTO DetalleBoleta VALUES ('','','','','','')
+INSERT INTO DetallePedido VALUES ('','','','','','')
 
-SELECT * FROM DetalleBoleta
+SELECT * FROM DetallePedido
 
