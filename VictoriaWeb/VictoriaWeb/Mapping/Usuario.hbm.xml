@@ -4,7 +4,7 @@
                    namespace="VictoriaWeb.Dominio"
                    default-lazy="false">
   <class name="Usuario" table="Usuario">
-    <id name="Usuario" access="property" column="Usuario">
+    <id name="UsuarioID" access="property" column="Usuario">
       <generator class="native" />
     </id>
     <property name="Nick" column="Nick" />

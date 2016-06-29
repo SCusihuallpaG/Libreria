@@ -7,7 +7,7 @@ namespace VictoriaWeb.Dominio
 {
     public class Usuario
     {
-        public string Usuario { get; set; }
+        public string UsuarioID { get; set; }
         public string Nick { get; set; }
         public string Contrasena { get; set; }
     }

@@ -1,0 +1,6 @@
+D:\SISE\Ciclo 4\Desarrollo e Implementacion de Aplicaciones Web\Proyecto-Libreria\Libreria\VictoriaWeb\VictoriaWeb\obj\Debug\VictoriaWeb.csprojResolveAssemblyReference.cache
+D:\SISE\Ciclo 4\Desarrollo e Implementacion de Aplicaciones Web\Proyecto-Libreria\Libreria\VictoriaWeb\VictoriaWeb\bin\VictoriaWeb.dll.config
+D:\SISE\Ciclo 4\Desarrollo e Implementacion de Aplicaciones Web\Proyecto-Libreria\Libreria\VictoriaWeb\VictoriaWeb\bin\VictoriaWeb.dll
+D:\SISE\Ciclo 4\Desarrollo e Implementacion de Aplicaciones Web\Proyecto-Libreria\Libreria\VictoriaWeb\VictoriaWeb\bin\VictoriaWeb.pdb
+D:\SISE\Ciclo 4\Desarrollo e Implementacion de Aplicaciones Web\Proyecto-Libreria\Libreria\VictoriaWeb\VictoriaWeb\obj\Debug\VictoriaWeb.dll
+D:\SISE\Ciclo 4\Desarrollo e Implementacion de Aplicaciones Web\Proyecto-Libreria\Libreria\VictoriaWeb\VictoriaWeb\obj\Debug\VictoriaWeb.pdb
