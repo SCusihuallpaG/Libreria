@@ -57,6 +57,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\utiles-escolares_03_med_hr.jpg" />
+    <Content Include="Master\PaginaInicio.aspx" />
+    <Content Include="Master\Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -115,6 +118,20 @@
     <Compile Include="Dominio\Usuario.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Master\PaginaInicio.aspx.cs">
+      <DependentUpon>PaginaInicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\PaginaInicio.aspx.designer.cs">
+      <DependentUpon>PaginaInicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
