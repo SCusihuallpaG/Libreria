@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="VictoriaWeb"
+                   namespace="VictoriaWeb.Dominio"
+                   default-lazy="false">
+  <class name="Cliente" table="Cliente">
+    <id name="ClienteID" access="property" column="ClienteID">
+      <generator class="native" />
+    </id>
+    <property name="Nombre" column="Nombre" />
+    <property name="ApellidoPaterno" column="ApellidoPaterno" />
+    <property name="ApellidoMaterno" column="ApellidoMaterno" />
+    <property name="Direccion" column="Direccion" />
+    <property name="Telefono" column="Telefono" />
+    <many-to-one name="Usuario" column="Usuario" />
+    <many-to-one name="TipoDocumentoID" column="TipoDocumentoID" />
+    <namey-to-one name="DistritoID" column="DistritoID" />
+  </class>
+</hibernate-mapping>
