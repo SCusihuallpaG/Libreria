@@ -10,6 +10,6 @@
     <property name="CodigoTipoProducto" column="CodigoTipoProducto" />
     <property name="Nombre" column="Nombre" />
     <property name="Descripcion" column="Descripcion" />
-    <namey-to-one name="SubTipoPro" column="SubTipoPro" />
+    <many-to-one name="SubTipoPro" column="SubTipoPro" />
   </class>
 </hibernate-mapping>

@@ -8,10 +8,10 @@
       <generator class="native" />
     </id>
     <property name="Nombre" column="Nombre" />
-    <namey-to-one name="MarcaID" column="MarcaID" />
+    <many-to-one name="MarcaID" column="MarcaID" />
     <property name="Precio" column="Precio" />
     <property name="Stock" column="Stock" />
     <!--acá iría la foto pero no se como se hace :v-->
-    <namey-to-one name="TipoProdId" column="TipoProdId" />
+    <many-to-one name="TipoProdId" column="TipoProdId" />
   </class>
 </hibernate-mapping>
