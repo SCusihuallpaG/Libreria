@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>Compra online a los mejores precios!!!</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -15,8 +15,18 @@
         <asp:Image ID="Image1" runat="server" Height="311px" ImageUrl="~/Images/utiles-escolares_03_med_hr.jpg" Width="1297px" />
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
+            <asp:Button ID="Button1" runat="server" Text="Home" Width="140px" />
+        
         </asp:ContentPlaceHolder>
+        <asp:Button ID="Button2" runat="server" Text="Artículos de Oficina" Width="140px" />
+        <asp:Button ID="Button3" runat="server" Text="Artículos Escolares" Width="140px" />
+        <asp:Button ID="Button5" runat="server" Text="Cuadernos y textos" Width="140px" />
+        <asp:Button ID="Button7" runat="server" Text="Arte y Diseño" Width="140px" />
+        <asp:Button ID="Button8" runat="server" Text="Papeleria" Width="140px" />
+        <asp:Button ID="Button9" runat="server" Text="Contáctenos" Width="140px" />
     </div>
+        <asp:ListView ID="ListView1" runat="server">
+        </asp:ListView>
     </form>
 </body>
 </html>
