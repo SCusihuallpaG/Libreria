@@ -71,7 +71,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Mapping\Cliente.hbm.xml" />
+    <Content Include="Mapping\Cliente.hbm.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Mapping\DetallePedido.hbm.xml" />
+    <Content Include="Mapping\Distrito.hbm.xml" />
+    <Content Include="Mapping\Empleado.hbm.xml" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -91,7 +96,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dominio\Cliente.cs" />
-    <Compile Include="Dominio\DetalleBoleta.cs" />
     <Compile Include="Dominio\DetallePedido.cs" />
     <Compile Include="Dominio\Distrito.cs" />
     <Compile Include="Dominio\Empleado.cs" />
