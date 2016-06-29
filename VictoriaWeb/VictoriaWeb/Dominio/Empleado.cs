@@ -15,6 +15,8 @@ namespace VictoriaWeb.Dominio
         public decimal Sueldo { get; set; }
         public string Direccion { get; set; }
         public string Telefono { get; set; }
+        public Usuario Usuario { get; set; }
+        public Distrito DistritoID { get; set; }
 
     }
 }
