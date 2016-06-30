@@ -1,0 +1,20 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="MPEscolares.master.cs" Inherits="VictoriaWeb.Escolares.MPEscolares" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContenidoMenuContextual" runat="server">
+    <ul id="MenuContextual">
+        <li><a href="ArticulosEscolares.aspx">Articulos Escolares</a></li>
+        <li><a href="DibujoPintura.aspx"></a>Dibujos y Pintura</li>
+        <li><a href="FolderANDCarpetas.aspx">Folder y Carpetas</a></li>
+        <li><a href="ForrosEtiquetasTijeras.aspx">Forros,Etiquetas y Tijeras</a></li>
+        <li><a href="LapicerosANDPortaminas.aspx">Lpiceros y Portaminas</a></li>
+        <li><a href="MochilasLoncherasCartucheras.aspx">Mochilas,Loncheras y Cartucheras</a></li>
+        <li><a href="PegamentosLimpiatipos.aspx">Pegamentos y Limpiatipos</a></li>
+        <li><a href="PlastelinasCeramicas.aspx">PLastelinas y Cerámicas</a></li>
+    </ul>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContenidoPrincipal" runat="server">
+    <asp:ContentPlaceHolder ID="ContenidoPrincipal" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</asp:Content>

@@ -5,6 +5,10 @@
     <ul id="MenuContextual">
         <li><a href="ArticulosEscritorio.aspx">Artículos de Escritorio</a></li>
         <li><a href="BoligrafosFinos.aspx">Boligrafos Finos</a></li>
+        <li><a href="ArticulosVarios.aspx">Articulos Varios</a></li>
+        <li><a href="EtiquetasCintasPegamentos.aspx">Etiquetas, Cintas y Pegamentos</a></li>
+        <li><a href="FormatosAdministrativosyContables.aspx">Formatos Administrativos y Contables</a></li>
+        <li><a href="SistemasdeArchivo.aspx">Sistemas de Archivos</a></li>
     </ul>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContenidoPrincipal" runat="server">
