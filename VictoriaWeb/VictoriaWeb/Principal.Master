@@ -8,6 +8,15 @@
     <title>Comprar Online a los mejores precios!!!</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 968px;
+            margin-left: 0px;
+        }
+        .auto-style2 {
+            margin-left: 0px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">        
@@ -15,16 +24,8 @@
         <%--Cabecera--%>
         <div id="Cabecera">
             <%--Contenido Cabecera--%>
-            <div id="ContenidoCabecera">
-                <%--Barra Horizontal --%>
-                <div id="BarraHorizontal">
-                    <ul>
-                        <li><a href="/Default.aspx">    Home </a> </li>   
-                        <li><a href="/Productos/AgregarProductos.aspx">Productos</a> </li>
-                        <li><a href="/Oficina/ArticulosEscritorio.aspx">Artículos de Oficina</a> </li>
-                        <li><a href="/Escolares/DibujoPintura.aspx">Artículos Escolares</a></li>
-                    </ul>
-                </div>      
+            <div id="ContenidoCabecera" >
+
                 <%--Logotipo--%>
                 <div id="Logotipo">
 
@@ -33,34 +34,42 @@
                 <div id="Titulo">
                     <h1>Libreria-Bazar Victoria</h1>
                 </div>
+                
+                
             </div>
-        </div>
-
-        <%--Bajo--%>
-        <div id="Bajo">
-            <%--Columna Izquiera--%>
+            <%--Barra Horizontal --%>
+                <div id="BarraHorizontal">
+                    <ul>
+                       
+                        <li><a href="/Oficina/ArticulosEscritorio.aspx">Artículos de Oficina</a> </li>
+                        <li><a href="/Escolares/DibujoPintura.aspx">Artículos Escolares</a></li>
+                        <li><a href="/Escolares/DibujoPintura.aspx">Computo y Electronica</a></li>
+                        <li><a href="/Escolares/DibujoPintura.aspx">Cuadernos y Textos</a></li>
+                        <li><a href="/Escolares/DibujoPintura.aspx">Jugueteria</a></li>
+                        <li><a href="/Escolares/DibujoPintura.aspx">Papeleria</a></li>
+                        <li><a href="/Escolares/DibujoPintura.aspx">Arte y Diseño </a></li>
+                    </ul>
+                </div> 
+             <%--Columna Izquiera--%>
             <div id="ColumnIzquierda">                          
                 <asp:ContentPlaceHolder ID="ContenidoMenuContextual" runat="server">
         
                 </asp:ContentPlaceHolder>
             </div>
-            <%--Columna Central--%>
-            <div id="ColumnCentro">
-                <asp:ContentPlaceHolder ID="ContenidoPrincipal" runat="server">
-        
-                </asp:ContentPlaceHolder>
-                
-            </div>
+            
             <%--Columna Derecha--%>
             <div id="ColumnDerecha">
 
             </div>
             <%--Pie--%>
             <div id="Pie">
+            
+                 
+        </div>
 
-            </div>
-
-        </div>        
+        </div> 
+      
+               
     </div>
     </form>
 </body>
