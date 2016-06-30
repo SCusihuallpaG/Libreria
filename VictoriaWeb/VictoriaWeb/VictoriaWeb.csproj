@@ -650,15 +650,18 @@
     <Compile Include="Persistencia\CategoriaDAO.cs" />
     <Compile Include="Persistencia\ClienteDAO.cs" />
     <Compile Include="Persistencia\ConexionUtil.cs" />
+    <Compile Include="Persistencia\DetallePedidoDAO.cs" />
     <Compile Include="Persistencia\DistritoDAO.cs" />
     <Compile Include="Persistencia\EmpleadoDAO.cs" />
     <Compile Include="Persistencia\MarcaDAO.cs" />
     <Compile Include="Persistencia\NHibernateHelper.cs" />
+    <Compile Include="Persistencia\PedidoDAO.cs" />
     <Compile Include="Persistencia\ProductoDAO.cs" />
     <Compile Include="Persistencia\SubCategoriaDAO.cs" />
     <Compile Include="Persistencia\TipoDocumentoDAO.cs" />
     <Compile Include="Persistencia\TipoEmpleadoDAO.cs" />
     <Compile Include="Persistencia\TipoProductoDAO.cs" />
+    <Compile Include="Persistencia\UsuarioDAO.cs" />
     <Compile Include="Principal.Master.cs">
       <DependentUpon>Principal.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
