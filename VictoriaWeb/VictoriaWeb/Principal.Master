@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Principal.master.cs" Inherits="VictoriaWeb.Principal" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Comprar Online a los mejores precios!!!</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <%--Cabecera--%>
+        <div id="Cabecera">
+            <%--Contenido Cabecera--%>
+            <div id="ContenidoCabecera">
+                <img src="Images/utiles-escolares_03_med_hr.jpg" />
+                <%--Logotipo--%>
+                <div id="Logotipo">
+
+                </div>
+                <%--Titulo--%>
+                <div id="Titulo">
+                    <h1>Libreria-Bazar Victoria</h1>
+                </div>
+            </div>
+        </div>
+
+        <%--Bajo--%>
+        <div id="Bajo">
+            <%--Columna Izquiera--%>
+            <div id="ColumnIzquierda">
+                <%--Barra Horizontal 1--%>
+                <div id="BarraHorizontal1">
+                    <ul>
+                        <li><a href="/Default.aspx">Home</a> </li>                                               
+                    </ul>
+                </div>
+                <%--Barra Horizontal 2--%>
+                <div id="BarraHorizontal2">
+                    <ul>
+                        <li><a href="/Producto/ListaProductos.aspx">Productos</a> </li>                        
+                    </ul>
+                </div>
+                <%--Barra Horizontal 3--%>
+                <div id="BarraHorizontal3">
+                    <ul>
+                        <li><a href="/Marca/Marca.aspx">Marca</a> </li>                        
+                    </ul>
+                </div>
+                <asp:ContentPlaceHolder ID="ContenidoMenuContextual" runat="server">
+        
+                </asp:ContentPlaceHolder>
+            </div>
+            <%--Columna Central--%>
+            <div id="ColumnCentro">
+                <asp:ContentPlaceHolder ID="ContenidoPrincipal" runat="server">
+        
+                </asp:ContentPlaceHolder>
+                
+            </div>
+            <%--Columna Derecha--%>
+            <div id="ColumnDerecha">
+
+            </div>
+            <%--Pie--%>
+            <div id="Pie">
+
+            </div>
+
+        </div>        
+    </div>
+    </form>
+</body>
+</html>

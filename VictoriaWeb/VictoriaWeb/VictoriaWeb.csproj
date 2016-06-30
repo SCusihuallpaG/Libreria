@@ -57,9 +57,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\Tema1\Estilos.css" />
+    <Content Include="Default.aspx" />
     <Content Include="Images\utiles-escolares_03_med_hr.jpg" />
-    <Content Include="Master\PaginaInicio.aspx" />
-    <Content Include="Master\Site1.Master" />
+    <Content Include="Marca\Marca.aspx" />
+    <Content Include="Principal.Master" />
+    <Content Include="Producto\ListaProductos.aspx" />
+    <Content Include="Producto\MPProducto.master" />
+    <Content Include="Marca\MPMarca.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -105,39 +110,66 @@
     <Content Include="Scripts\jquery-1.9.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dominio\Cliente.cs" />
-    <Compile Include="Dominio\DetallePedido.cs" />
-    <Compile Include="Dominio\Distrito.cs" />
-    <Compile Include="Dominio\Empleado.cs" />
-    <Compile Include="Dominio\Marca.cs" />
-    <Compile Include="Dominio\Pedido.cs" />
-    <Compile Include="Dominio\Producto.cs" />
-    <Compile Include="Dominio\TipoDocumento.cs" />
-    <Compile Include="Dominio\TipoEmpleado.cs" />
-    <Compile Include="Dominio\TipoProducto.cs" />
-    <Compile Include="Dominio\Usuario.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Marca\Marca.aspx.cs">
+      <DependentUpon>Marca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Marca\Marca.aspx.designer.cs">
+      <DependentUpon>Marca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Marca\MPMarca.master.cs">
+      <DependentUpon>MPMarca.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Marca\MPMarca.master.designer.cs">
+      <DependentUpon>MPMarca.master</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\DetallePedido.cs" />
+    <Compile Include="Models\Distrito.cs" />
+    <Compile Include="Models\Empleado.cs" />
+    <Compile Include="Models\Marca.cs" />
+    <Compile Include="Models\Pedido.cs" />
+    <Compile Include="Models\Producto.cs" />
+    <Compile Include="Models\TipoDocumento.cs" />
+    <Compile Include="Models\TipoEmpleado.cs" />
+    <Compile Include="Models\TipoProducto.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Master\PaginaInicio.aspx.cs">
-      <DependentUpon>PaginaInicio.aspx</DependentUpon>
+    <Compile Include="Principal.Master.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Master\PaginaInicio.aspx.designer.cs">
-      <DependentUpon>PaginaInicio.aspx</DependentUpon>
+    <Compile Include="Principal.Master.designer.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
     </Compile>
-    <Compile Include="Master\Site1.Master.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
+    <Compile Include="Producto\ListaProductos.aspx.cs">
+      <DependentUpon>ListaProductos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Master\Site1.Master.designer.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
+    <Compile Include="Producto\ListaProductos.aspx.designer.cs">
+      <DependentUpon>ListaProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Producto\MPProducto.master.cs">
+      <DependentUpon>MPProducto.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Producto\MPProducto.master.designer.cs">
+      <DependentUpon>MPProducto.master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
