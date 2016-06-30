@@ -512,3 +512,16 @@ Insert into TipoProducto values('Lienzo')
 Select *  from TipoProducto
 GO
 
+select * from TipoProducto
+order by Nombre
+GO
+
+insert into Producto values ('Clips Metalicos','sujeta hojas',1,null,'33mm','caja','0.9','15','Alfileres-Artesco.jpg',3,'SC001')
+insert into Producto values ('Clips para Micas','',64,null,null,'UND','0.5','15','Clips para Micas-Memoris.jpg',3,'SC001')
+insert into Producto values ('Chinches Dorados','sujeta hojas',64,null,'','Caja','0.9','15','Chinches Dorados-Memoris.jpg',3,'SC001')
+insert into Producto values ('Lapiz IM ','Boligrafo elegante',80,'Dorado','','UND','280.1','10','Lapicero IM Dorado-Parker.jpg',20,'SC002')
+insert into Producto values ('Cola','Usado para pegar hojas',77,null,null,'UND','0.4','55','Cola-Pegafan.jpg',51,'SC003')
+
+
+select * from Producto
+GO
