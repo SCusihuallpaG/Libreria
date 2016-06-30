@@ -1,0 +1,150 @@
+﻿body {
+}
+#Cabecera {
+    height:150px;
+    background-color:#ffffff;
+    color:white;
+    border:0px dashed #A64E06;
+    /*box-shadow:0px 0px 10px #000;*/
+    position:relative;
+    z-index:2;
+}
+#ContenidoCabecera {
+    width:900px;
+    margin:auto;
+}
+#BarraHorizontal1 {
+    height:40px;
+    width:100%;
+    background-color:#009e44;
+    /*border-radius:10px 10px 10px 10px;*/
+    /*box-shadow:0px 0px 10px #000 initial;*/
+    text-align:center;
+    
+    
+}
+
+    #BarraHorizontal1 > ul{
+        list-style-type:none;
+        padding:5px;
+        cursor:pointer;
+        background-color:#FF9A40;
+        color:#4800ff;
+    }
+
+    #BarraHorizontal1 li{
+        display:inline-block;
+        padding:0;
+        margin:0;
+    }
+
+
+#BarraHorizontal2 {
+    height:40px;
+    width:100%;
+    background-color:#009e44;
+    /*border-radius:10px 10px 10px 10px;*/
+    /*box-shadow:0px 0px 10px #000 initial;*/
+    text-align:center;
+    
+    
+}
+
+    #BarraHorizontal2 > ul{
+        list-style-type:none;
+        padding:5px;
+        cursor:pointer;
+        background-color:#FF9A40;
+        color:#4800ff;
+    }
+
+    #BarraHorizontal2 li{
+        display:inline-block;
+        padding:0;
+        margin:0;
+    }
+/*Barra Horizontal 3*/
+#BarraHorizontal3 {
+    height:40px;
+    width:100%;
+    background-color:#009e44;
+    /*border-radius:10px 10px 10px 10px;*/
+    /*box-shadow:0px 0px 10px #000 initial;*/
+    text-align:center;
+    
+    
+}
+
+    #BarraHorizontal3 > ul{
+        list-style-type:none;
+        padding:5px;
+        cursor:pointer;
+        background-color:#FF9A40;
+        color:#4800ff;
+    }
+
+    #BarraHorizontal3 li{
+        display:inline-block;
+        padding:0;
+        margin:0;
+    }
+
+#Logotipo {
+    width:10%;
+    float:left;
+    text-align:center;
+    margin-top:10px;
+}
+
+    #Logotipo > img{
+            box-shadow:0px 0px 10px #000;
+        }
+
+#Titulo {
+    width:100%;
+    float:left;
+    text-shadow:2px 2px 3px #000;
+    text-align:center;
+    color:#ffde00;
+}
+    #Titulo > h1{
+        margin-top:20px;
+    }
+
+    #Titulo > h2{
+        margin-bottom:0px;
+    }
+
+#Bajo {
+    width:900px;
+    margin:auto;
+    background-color:#FF9A40;
+    border-radius:0px 0px 20px 20px;
+    overflow:auto;
+    box-shadow:0px 0px 10px #000;
+}
+#ColumnIzquierda {
+    float:left;
+    width:20%;
+    min-height:500px;
+    background-color:white;
+}
+
+#ColumnCentro {
+    float:left;
+    width:80%;
+    min-height:500px;
+    background-color:white;
+    box-shadow:0px 0px 5px #000 inset;
+}
+
+#Pie {
+    height:30px;
+    background-color:#65c200;
+    border-radius:0px 0px 20px 20px;
+    clear:both;
+    box-shadow:0px 0px 5px #000 inset;
+    color:white;
+    text-align:center;
+    padding-top:5px;
+}
