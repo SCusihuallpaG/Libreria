@@ -6,3 +6,9 @@ D:\SISE\Ciclo 4\Desarrollo e Implementacion de Aplicaciones Web\Proyecto-Libreri
 D:\SISE\Ciclo 4\Desarrollo e Implementacion de Aplicaciones Web\Proyecto-Libreria\Libreria\VictoriaWeb\VictoriaWeb\obj\Debug\VictoriaWeb.pdb
 D:\SISE\Ciclo 4\Desarrollo e Implementacion de Aplicaciones Web\Proyecto-Libreria\Libreria\VictoriaWeb\VictoriaWeb\bin\Iesi.Collections.dll
 D:\SISE\Ciclo 4\Desarrollo e Implementacion de Aplicaciones Web\Proyecto-Libreria\Libreria\VictoriaWeb\VictoriaWeb\bin\NHibernate.dll
+C:\Users\gloria\Documents\GitHub\Libreria\VictoriaWeb\VictoriaWeb\bin\VictoriaWeb.dll.config
+C:\Users\gloria\Documents\GitHub\Libreria\VictoriaWeb\VictoriaWeb\bin\VictoriaWeb.dll
+C:\Users\gloria\Documents\GitHub\Libreria\VictoriaWeb\VictoriaWeb\bin\VictoriaWeb.pdb
+C:\Users\gloria\Documents\GitHub\Libreria\VictoriaWeb\VictoriaWeb\obj\Debug\VictoriaWeb.csprojResolveAssemblyReference.cache
+C:\Users\gloria\Documents\GitHub\Libreria\VictoriaWeb\VictoriaWeb\obj\Debug\VictoriaWeb.dll
+C:\Users\gloria\Documents\GitHub\Libreria\VictoriaWeb\VictoriaWeb\obj\Debug\VictoriaWeb.pdb
