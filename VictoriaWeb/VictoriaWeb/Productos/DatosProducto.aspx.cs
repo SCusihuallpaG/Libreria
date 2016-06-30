@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace VictoriaWeb.Marca
+namespace VictoriaWeb.Productos
 {
-    public partial class Marca : System.Web.UI.Page
+    public partial class DatosProducto : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

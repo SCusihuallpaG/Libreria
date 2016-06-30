@@ -60,11 +60,11 @@
     <Content Include="App_Themes\Tema1\Estilos.css" />
     <Content Include="Default.aspx" />
     <Content Include="Images\utiles-escolares_03_med_hr.jpg" />
-    <Content Include="Marca\Marca.aspx" />
     <Content Include="Principal.Master" />
-    <Content Include="Producto\ListaProductos.aspx" />
-    <Content Include="Producto\MPProducto.master" />
-    <Content Include="Marca\MPMarca.master" />
+    <Content Include="Productos\AgregarProductos.aspx" />
+    <Content Include="Productos\DatosProducto.aspx" />
+    <Content Include="Productos\ListaProductos.aspx" />
+    <Content Include="Productos\MPProductos.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -117,20 +117,6 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Marca\Marca.aspx.cs">
-      <DependentUpon>Marca.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Marca\Marca.aspx.designer.cs">
-      <DependentUpon>Marca.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Marca\MPMarca.master.cs">
-      <DependentUpon>MPMarca.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Marca\MPMarca.master.designer.cs">
-      <DependentUpon>MPMarca.master</DependentUpon>
-    </Compile>
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\DetallePedido.cs" />
     <Compile Include="Models\Distrito.cs" />
@@ -152,24 +138,39 @@
     <Compile Include="Principal.Master.designer.cs">
       <DependentUpon>Principal.Master</DependentUpon>
     </Compile>
-    <Compile Include="Producto\ListaProductos.aspx.cs">
+    <Compile Include="Productos\AgregarProductos.aspx.cs">
+      <DependentUpon>AgregarProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Productos\AgregarProductos.aspx.designer.cs">
+      <DependentUpon>AgregarProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\DatosProducto.aspx.cs">
+      <DependentUpon>DatosProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Productos\DatosProducto.aspx.designer.cs">
+      <DependentUpon>DatosProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\ListaProductos.aspx.cs">
       <DependentUpon>ListaProductos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Producto\ListaProductos.aspx.designer.cs">
+    <Compile Include="Productos\ListaProductos.aspx.designer.cs">
       <DependentUpon>ListaProductos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Producto\MPProducto.master.cs">
-      <DependentUpon>MPProducto.master</DependentUpon>
+    <Compile Include="Productos\MPProductos.master.cs">
+      <DependentUpon>MPProductos.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Producto\MPProducto.master.designer.cs">
-      <DependentUpon>MPProducto.master</DependentUpon>
+    <Compile Include="Productos\MPProductos.master.designer.cs">
+      <DependentUpon>MPProductos.master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Marcas\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

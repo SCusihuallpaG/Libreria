@@ -10,13 +10,19 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server">        
     <div>
         <%--Cabecera--%>
         <div id="Cabecera">
             <%--Contenido Cabecera--%>
             <div id="ContenidoCabecera">
-                <img src="Images/utiles-escolares_03_med_hr.jpg" />
+                <%--Barra Horizontal --%>
+                <div id="BarraHorizontal">
+                    <ul>
+                        <li><a href="/Default.aspx">    Home </a> </li>   
+                        <li><a href="/Productos/AgregarProductos.aspx">Productos</a> </li>                       
+                    </ul>
+                </div>      
                 <%--Logotipo--%>
                 <div id="Logotipo">
 
@@ -31,25 +37,7 @@
         <%--Bajo--%>
         <div id="Bajo">
             <%--Columna Izquiera--%>
-            <div id="ColumnIzquierda">
-                <%--Barra Horizontal 1--%>
-                <div id="BarraHorizontal1">
-                    <ul>
-                        <li><a href="/Default.aspx">Home</a> </li>                                               
-                    </ul>
-                </div>
-                <%--Barra Horizontal 2--%>
-                <div id="BarraHorizontal2">
-                    <ul>
-                        <li><a href="/Producto/ListaProductos.aspx">Productos</a> </li>                        
-                    </ul>
-                </div>
-                <%--Barra Horizontal 3--%>
-                <div id="BarraHorizontal3">
-                    <ul>
-                        <li><a href="/Marca/Marca.aspx">Marca</a> </li>                        
-                    </ul>
-                </div>
+            <div id="ColumnIzquierda">                          
                 <asp:ContentPlaceHolder ID="ContenidoMenuContextual" runat="server">
         
                 </asp:ContentPlaceHolder>

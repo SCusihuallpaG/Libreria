@@ -7,9 +7,9 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace VictoriaWeb.Producto {
+namespace VictoriaWeb.Productos {
     
     
-    public partial class ListaProductos {
+    public partial class AgregarProductos {
     }
 }
