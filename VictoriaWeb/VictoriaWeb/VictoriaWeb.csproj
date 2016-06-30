@@ -38,7 +38,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Iesi.Collections">
+      <HintPath>G:\CICLO 4\Desarrollo e  Impl de App web\Hibernate\NHibernate\Iesi.Collections.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NHibernate">
+      <HintPath>G:\CICLO 4\Desarrollo e  Impl de App web\Hibernate\NHibernate\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -640,6 +646,9 @@
     <Compile Include="Oficina\MPOficina.master.designer.cs">
       <DependentUpon>MPOficina.master</DependentUpon>
     </Compile>
+    <Compile Include="Persistencia\BaseDAO.cs" />
+    <Compile Include="Persistencia\ConexionUtil.cs" />
+    <Compile Include="Persistencia\NHibernateHelper.cs" />
     <Compile Include="Principal.Master.cs">
       <DependentUpon>Principal.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
