@@ -3,10 +3,11 @@
                    assembly="VictoriaWeb"
                    namespace="VictoriaWeb.Dominio"
                    default-lazy="false">
-  <class name="TipoProducto" table="TipoProducto">
-    <id name="TipoProdID" access="property" column="TipoProdID">
+  <class name="SubCategoria" table="SubCategoria">
+    <id name="SubCatID" access="property" column="SubCatID">
       <generator class="native" />
     </id>
     <property name="Nombre" column="Nombre" />
+    <many-to-one name="CategoriaID" column="CategoriaID" />
   </class>
 </hibernate-mapping>

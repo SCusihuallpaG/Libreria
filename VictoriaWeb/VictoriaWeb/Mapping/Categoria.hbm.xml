@@ -3,8 +3,8 @@
                    assembly="VictoriaWeb"
                    namespace="VictoriaWeb.Dominio"
                    default-lazy="false">
-  <class name="TipoProducto" table="TipoProducto">
-    <id name="TipoProdID" access="property" column="TipoProdID">
+  <class name="Categoria" table="Categoria">
+    <id name="CategoriaID" access="property" column="CategoriaID">
       <generator class="native" />
     </id>
     <property name="Nombre" column="Nombre" />

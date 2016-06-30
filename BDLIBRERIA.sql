@@ -6,21 +6,21 @@ Go
 
 CREATE TABLE Usuario(
 Usuario char(5) primary key,
-nick varchar(15) unique not null,
+Nick varchar(15) unique not null,
 Contrasena char(3)not null
 )
 GO
 
 CREATE TABLE TipoEmpleado(
 TipoEmpleadoID int Identity(1,1) not null primary key,
-Descripcion varchar(20) unique  not null
+Descripcion varchar(100) unique  not null
 )
 GO
 
 
 CREATE TABLE TipoDocumento(
 TipoDocumentoID int Identity(1,1) not null primary key,
-ruc varchar(10) not null
+Ruc varchar(11) not null
 )
 GO
 
@@ -33,7 +33,7 @@ GO
 
 CREATE TABLE Marca(
 MarcaID int Identity(1,1) not null primary key,
-Nombre varchar(30)not null,
+Nombre varchar(60)not null,
 )
 GO
 
@@ -41,7 +41,7 @@ GO
 
 CREATE TABLE TipoProducto(
 TipoProdID int Identity not null primary key,
-Nombre varchar(30),
+Nombre varchar(60),
 
 )
 GO
@@ -50,7 +50,7 @@ GO
 
 CREATE TABLE Categoria(
 CategoriaID char(3) not null primary key,
-Nombre varchar(30) not null
+Nombre varchar(60) not null
 )
 GO
 
@@ -107,15 +107,15 @@ GO
 
 CREATE TABLE Producto(
 ProductoID int Identity(100,3) not null primary key,
-Nombre varchar(30) not null,
-descripcion varchar(30),
+Nombre varchar(60) not null,
+Descripcion varchar(100),
 MarcaID int not null,
-color varchar(15),
-tamaño varchar(10),
+Color varchar(15),
+Tamano varchar(10),
 UNIDMedida varchar(15),
 Precio decimal(5,2) not null,
 Stock int not null,
-Foto bit,
+Foto image,
 TipoProdId int not null,
 SubCatID char(5)not null,
 constraint fk_Producto_tipo foreign key (TipoProdId)references TipoProducto(TipoProdId),

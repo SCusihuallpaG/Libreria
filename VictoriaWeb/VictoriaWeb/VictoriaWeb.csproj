@@ -541,6 +541,8 @@
     <Content Include="Images\Papelería\Papeles Varios\Papel Seda.jpg" />
     <Content Include="Images\Papelería\Papeles Varios\Papelografo.jpg" />
     <Content Include="Images\utiles-escolares_03_med_hr.jpg" />
+    <Content Include="Mapping\Categoria.hbm.xml" />
+    <Content Include="Mapping\SubCategoria.hbm.xml" />
     <Content Include="Oficina\ArticulosEscritorio.aspx" />
     <Content Include="Oficina\BoligrafosFinos.aspx" />
     <Content Include="Principal.Master" />
