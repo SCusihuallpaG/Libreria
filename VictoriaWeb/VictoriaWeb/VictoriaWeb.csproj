@@ -601,6 +601,7 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\DetallePedido.cs" />
     <Compile Include="Models\Distrito.cs" />
@@ -608,6 +609,7 @@
     <Compile Include="Models\Marca.cs" />
     <Compile Include="Models\Pedido.cs" />
     <Compile Include="Models\Producto.cs" />
+    <Compile Include="Models\SubCategoria.cs" />
     <Compile Include="Models\TipoDocumento.cs" />
     <Compile Include="Models\TipoEmpleado.cs" />
     <Compile Include="Models\TipoProducto.cs" />
