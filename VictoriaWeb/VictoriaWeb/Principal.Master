@@ -25,13 +25,13 @@
                 <div id="BarraHorizontal">
                     <ul>
                         <%--<li><a href="/Default.aspx">    Home </a> </li>--%>
-                        <%--<li><a href="/Oficina/ArticulosEscritorio.aspx">Artículos de Oficina</a> </li>
+                        <li><a href="/Oficina/ArticulosEscritorio.aspx">Artículos de Oficina</a> </li>
                         <li><a href="/Escolares/DibujoPintura.aspx">Artículos Escolares</a></li>
                         <li><a href="/Arte y Diseño/Accesorios.aspx">Arte y Diseño</a></li>
                         <li><a href="/Computo y Electronica/Almacenamiento.aspx">Cómputo y Electrónica</a></li>
                         <li><a href="/Cuadernos y Textos/AgendasGuias.aspx">Agendas y Guias</a></li>
                         <li><a href="/Juguetes e Infantil/Bebes.aspx">Juguetes</a></li>
-                        <li><a href="/Papeleria/Cartones.aspx">Papeleria</a></li>--%>
+                        <li><a href="/Papeleria/Cartones.aspx">Papeleria</a></li>
                     </ul>
                 </div>      
                 <%--Logotipo--%>

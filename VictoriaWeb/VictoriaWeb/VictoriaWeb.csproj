@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -594,6 +595,7 @@
     <Content Include="Cuadernos y Textos\MPCuadernosTextos.master" />
     <Content Include="Juguetes e Infantil\MPJuguetesInfantil.master" />
     <Content Include="Papeleria\MPPapeleria.master" />
+    <Content Include="ImageHandler.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -834,6 +836,9 @@
     </Compile>
     <Compile Include="Escolares\PlastelinasCeramicas.aspx.designer.cs">
       <DependentUpon>PlastelinasCeramicas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageHandler.ashx.cs">
+      <DependentUpon>ImageHandler.ashx</DependentUpon>
     </Compile>
     <Compile Include="Juguetes e Infantil\Bebes.aspx.cs">
       <DependentUpon>Bebes.aspx</DependentUpon>
