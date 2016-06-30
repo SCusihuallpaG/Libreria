@@ -42,6 +42,7 @@ GO
 CREATE TABLE TipoProducto(
 TipoProdID int Identity not null primary key,
 Nombre varchar(30),
+
 )
 GO
 
@@ -60,10 +61,6 @@ constraint fk_SubCategoria_Categoria foreign key(CategoriaID ) references Catego
 )
 GO
 
-
-
-
-
 CREATE TABLE Empleado(
 EmpleadoID int Identity(1,1) not null primary key,
 TipoEmpleadoID int not null,
@@ -80,7 +77,6 @@ constraint  fk_Empleado_Distrito foreign key(DistritoID) references Distrito(Dis
 constraint  fk_Empleado_Usuario foreign key(Usuario) references Usuario(Usuario)
 )
 GO
-
 
 CREATE TABLE Cliente(
 ClienteID int Identity(1,1) not null primary key,
@@ -107,7 +103,6 @@ ClienteID int not null,
 constraint fk_Pedido_Cliente foreign key (ClienteID)references Cliente(ClienteID)
 )
 GO
-
 
 CREATE TABLE Producto(
 ProductoID int Identity(1,1) not null primary key,
@@ -139,7 +134,6 @@ constraint fk_DetEPedido_Pedido foreign key (PedidoID) references Pedido(PedidoI
 )
 GO
 
-
 --Admi
 insert into Usuario values ('U0001','Samu','123')
 insert into Usuario values ('U0002','Dani','234')
@@ -152,15 +146,15 @@ insert into Usuario values ('U0007','SuperMari','678')
 insert into Usuario values ('U0008','HurMonica','789')
 insert into Usuario values ('U0009','Oscarcito','891')
 insert into Usuario values ('U0010','Pedrito','912')
-
-
+GO
 
 Select *  from Usuario
-
+GO
 INSERT INTO TipoEmpleado VALUES ('Administrador')
 INSERT INTO TipoEmpleado VALUES ('Vendedor')
-
+GO
 Select *  from TipoEmpleado
+GO
 
 INSERT INTO Distrito VALUES ('LIMA')
 INSERT INTO Distrito VALUES ('VMT')
@@ -171,20 +165,25 @@ INSERT INTO Distrito VALUES ('COMAS')
 INSERT INTO Distrito VALUES ('MIRAFLORES')
 INSERT INTO Distrito VALUES ('CHORRILLOS')
 INSERT INTO Distrito VALUES ('MAGDALENA')
-
+GO
 
 Select *  from Distrito
+GO
 
 INSERT INTO Empleado VALUES(1,'Samuel','Cusihuallpa','Guillen',100.1,'Av. Simon Bolivar','2833029','U0001',1)
 INSERT INTO Empleado VALUES(1,'Danilo','Zamudio','Arevalo XD!',2000,'Av. Lurin','4257821','U0002',3)
+GO
 
 Select *  from Empleado
+GO
 
 INSERT INTO TipoDocumento VALUES ('2345678912')
 INSERT INTO TipoDocumento VALUES ('5678923456')
 INSERT INTO TipoDocumento VALUES ('7863234912')
+GO
 
 Select *  from TipoDocumento
+GO
 
 insert into Cliente values('Juan','Perez','Quispe','AV.28 de Julio 168','1235657891','U0004',null,9)
 insert into Cliente values('Jose','Salazar','Magariño','AV.Los Faisanes 180','1567567891','U0005',null,2)
@@ -193,10 +192,10 @@ insert into Cliente values('Mariela','Alveda','Villar','AV.Huylas 120','14567878
 insert into Cliente values('Monica','Hurtado','Espinoza','AV.Las Gaviotas 145','1963267891','U0008',null,5)
 insert into Cliente values('Oscar','Rojas','Molina','AV.Los Manzanales 854','1944567891','U0009',2,6)
 insert into Cliente values('Pedro','Alcala','Muñoz','Jr.Los Palcos 192','1951267891','U0010',null,7)
-
-
+GO
 
 SELECT * FROM Cliente
+GO
 
 INSERT INTO Marca VALUES ('ARTESCO')
 INSERT INTO Marca VALUES ('ACRIMET')
@@ -303,7 +302,6 @@ INSERT INTO Marca VALUES ('TRODAT')
 INSERT INTO Marca VALUES ('UHU')
 INSERT INTO Marca VALUES ('ULTRA COPY')
 INSERT INTO Marca VALUES ('UNIBALL')
-INSERT INTO Marca VALUES ('UNI')
 INSERT INTO Marca VALUES ('VIKINGO')
 INSERT INTO Marca VALUES ('VINIBALL')
 INSERT INTO Marca VALUES ('VINIFAN')
@@ -318,10 +316,11 @@ INSERT INTO Marca VALUES ('XEROX')
 INSERT INTO Marca VALUES ('YES')
 INSERT INTO Marca VALUES ('YOOBAO')
 INSERT INTO Marca VALUES ('ZIGZAG')
+Go
 
-
-
-
+INSERT INTO Marca VALUES ('LEITZ')
+INSERT INTO Marca VALUES ('OLFA')
+INSERT INTO Marca VALUES ('NORIS')
 INSERT INTO Marca VALUES ('')
 INSERT INTO Marca VALUES ('')
 INSERT INTO Marca VALUES ('')
@@ -334,23 +333,71 @@ INSERT INTO Marca VALUES ('')
 INSERT INTO Marca VALUES ('')
 INSERT INTO Marca VALUES ('')
 INSERT INTO Marca VALUES ('')
-INSERT INTO Marca VALUES ('')
-INSERT INTO Marca VALUES ('')
-INSERT INTO Marca VALUES ('')
-
-
+go
 
 SELECT * FROM Marca
+GO
 
-INSERT INTO TipoProducto VALUES ('TP001','Oficina','asdasdsad',null)
-INSERT INTO TipoProducto VALUES ('TP002','Escolares','asdasdsad',null)
-INSERT INTO TipoProducto VALUES ('TP003','Arte','asdasdsad',null)
-INSERT INTO TipoProducto VALUES ('TP004','Computación','asdasdsad',null)
-INSERT INTO TipoProducto VALUES ('TP005','Electrónica','asdasdsad',null)
-INSERT INTO TipoProducto VALUES ('TP006','Manualidades','asdasdsad',2)
-INSERT INTO TipoProducto VALUES ('TP007','Regalería','asdasdsad',null)
+INSERT INTO Categoria VALUES ('C01','Artículos de Oficina')
+INSERT INTO Categoria VALUES ('C02','Atículos Escolares')
+INSERT INTO Categoria VALUES ('C03','Computación y Electronica')
+INSERT INTO Categoria VALUES ('C04','Cuadernos y Texto')
+INSERT INTO Categoria VALUES ('C05','Juguetes e Infantil')
+INSERT INTO Categoria VALUES ('C06','Papeleria')
+INSERT INTO Categoria VALUES ('C07','Arte y Diseño')
+
+GO
+
+select * from Categoria 
+Go
+
+INSERT INTO SubCategoria VALUES ('SC001','Artículos de Escritorio','C01')
+INSERT INTO SubCategoria VALUES ('SC001','Boligrafos Finos','C01')
+INSERT INTO SubCategoria VALUES ('SC001','Aderentes','C01')
+INSERT INTO SubCategoria VALUES ('SC001','Formatos Administrativos y contables','C01')
+INSERT INTO SubCategoria VALUES ('SC001','sistema de Archivo','C01')
+INSERT INTO SubCategoria VALUES ('SC001','Artículos varios','C01')
+INSERT INTO SubCategoria VALUES ('SC001','Escritura','C02')
+INSERT INTO SubCategoria VALUES ('SC001','Dibujo y Pintura','C02')
+INSERT INTO SubCategoria VALUES ('SC001','Etiqueta, Forros y Tijeras','C02')
+INSERT INTO SubCategoria VALUES ('SC001','Folders y Carpetas','C02')
+INSERT INTO SubCategoria VALUES ('SC001','Plastilina y Cerámicas','C02')
+INSERT INTO SubCategoria VALUES ('SC001','Pegamentos y Limpiatípos','C02')
+INSERT INTO SubCategoria VALUES ('SC001','Acsesorios Escolares','C02')
+INSERT INTO SubCategoria VALUES ('SC001','tóner, Tintas y Cintas','C03')
+INSERT INTO SubCategoria VALUES ('SC001','Almacenamiento','C03')
+INSERT INTO SubCategoria VALUES ('SC001','Audio y video','C03')
+INSERT INTO SubCategoria VALUES ('SC001','Cables','C03')
+INSERT INTO SubCategoria VALUES ('SC001','Calculadoras','C03')
+INSERT INTO SubCategoria VALUES ('SC001','Teclado y Mouses','C03')
+INSERT INTO SubCategoria VALUES ('SC001','Artículos varios','C03')
+INSERT INTO SubCategoria VALUES ('SC001','Videojuegos y Consolas','C03')
+INSERT INTO SubCategoria VALUES ('SC001','Cuadernos','C04')
+INSERT INTO SubCategoria VALUES ('SC001','Blocks','C04')
+INSERT INTO SubCategoria VALUES ('SC001','Cuentos','C04')
+INSERT INTO SubCategoria VALUES ('SC001','Agendas y Guías','C04')
+INSERT INTO SubCategoria VALUES ('SC001','Juguetes','C05')
+INSERT INTO SubCategoria VALUES ('SC001','Bebés','C05')
+INSERT INTO SubCategoria VALUES ('SC001','Tiempo Libre','C05')
+INSERT INTO SubCategoria VALUES ('SC001','Cartones','C06')
+INSERT INTO SubCategoria VALUES ('SC001','Papel Fotocopia','C06')
+INSERT INTO SubCategoria VALUES ('SC001','Papel Varios','C06')
+INSERT INTO SubCategoria VALUES ('SC001','Cartulinas','C06')
+INSERT INTO SubCategoria VALUES ('SC001','Papel Artístico','C07')
+INSERT INTO SubCategoria VALUES ('SC001','Acsesorios','C07')
+INSERT INTO SubCategoria VALUES ('SC001','Dibujo/ Ilusracíon','C07')
+INSERT INTO SubCategoria VALUES ('SC001','Pinceles','C07')
+INSERT INTO SubCategoria VALUES ('SC001','Pinturas','C07')
+INSERT INTO SubCategoria VALUES ('SC001','Soporte','C07')
+
+GO
+select * from SubCategoria
+GO
+
+Insert into TipoProducto values('')
 
 Select *  from TipoProducto
+GO
 
 
 --Boleta
