@@ -76,6 +76,10 @@
     <Content Include="Computo y Electronica\ImpresorasTintasTonerCintas.aspx" />
     <Content Include="Computo y Electronica\Limpieza.aspx" />
     <Content Include="Computo y Electronica\TecladoMouse.aspx" />
+    <Content Include="Cuadernos y Textos\AgendasGuias.aspx" />
+    <Content Include="Cuadernos y Textos\Blocks.aspx" />
+    <Content Include="Cuadernos y Textos\Cuadernos.aspx" />
+    <Content Include="Cuadernos y Textos\Cuentos.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Escolares\DibujoPintura.aspx" />
     <Content Include="Escolares\FolderANDCarpetas.aspx" />
@@ -569,17 +573,27 @@
     <Content Include="Images\utiles-escolares_03_med_hr.jpg" />
     <EmbeddedResource Include="Mapping\Categoria.hbm.xml" />
     <EmbeddedResource Include="Mapping\SubCategoria.hbm.xml" />
+    <Content Include="Juguetes e Infantil\Bebes.aspx" />
+    <Content Include="Juguetes e Infantil\Juguetes.aspx" />
+    <Content Include="Juguetes e Infantil\TiempoLibre.aspx" />
     <Content Include="Oficina\ArticulosEscritorio.aspx" />
     <Content Include="Oficina\ArticulosVarios.aspx" />
     <Content Include="Oficina\BoligrafosFinos.aspx" />
     <Content Include="Oficina\EtiquetasCintasPegamentos.aspx" />
     <Content Include="Oficina\FormatosAdministrativosyContables.aspx" />
     <Content Include="Oficina\SistemasdeArchivo.aspx" />
+    <Content Include="Papeleria\Cartones.aspx" />
+    <Content Include="Papeleria\Cartulina.aspx" />
+    <Content Include="Papeleria\OtrosPapeles.aspx" />
+    <Content Include="Papeleria\PapelesFotocopia.aspx" />
     <Content Include="Principal.Master" />
     <Content Include="Oficina\MPOficina.master" />
     <Content Include="Escolares\MPEscolares.master" />
     <Content Include="Arte y Diseño\MPArteDiseno.master" />
     <Content Include="Computo y Electronica\MPComputoElectronica.master" />
+    <Content Include="Cuadernos y Textos\MPCuadernosTextos.master" />
+    <Content Include="Juguetes e Infantil\MPJuguetesInfantil.master" />
+    <Content Include="Papeleria\MPPapeleria.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -723,6 +737,41 @@
     <Compile Include="Computo y Electronica\TecladoMouse.aspx.designer.cs">
       <DependentUpon>TecladoMouse.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Cuadernos y Textos\AgendasGuias.aspx.cs">
+      <DependentUpon>AgendasGuias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cuadernos y Textos\AgendasGuias.aspx.designer.cs">
+      <DependentUpon>AgendasGuias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cuadernos y Textos\Blocks.aspx.cs">
+      <DependentUpon>Blocks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cuadernos y Textos\Blocks.aspx.designer.cs">
+      <DependentUpon>Blocks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cuadernos y Textos\Cuadernos.aspx.cs">
+      <DependentUpon>Cuadernos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cuadernos y Textos\Cuadernos.aspx.designer.cs">
+      <DependentUpon>Cuadernos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cuadernos y Textos\Cuentos.aspx.cs">
+      <DependentUpon>Cuentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cuadernos y Textos\Cuentos.aspx.designer.cs">
+      <DependentUpon>Cuentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cuadernos y Textos\MPCuadernosTextos.master.cs">
+      <DependentUpon>MPCuadernosTextos.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cuadernos y Textos\MPCuadernosTextos.master.designer.cs">
+      <DependentUpon>MPCuadernosTextos.master</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -785,6 +834,34 @@
     </Compile>
     <Compile Include="Escolares\PlastelinasCeramicas.aspx.designer.cs">
       <DependentUpon>PlastelinasCeramicas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Juguetes e Infantil\Bebes.aspx.cs">
+      <DependentUpon>Bebes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Juguetes e Infantil\Bebes.aspx.designer.cs">
+      <DependentUpon>Bebes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Juguetes e Infantil\Juguetes.aspx.cs">
+      <DependentUpon>Juguetes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Juguetes e Infantil\Juguetes.aspx.designer.cs">
+      <DependentUpon>Juguetes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Juguetes e Infantil\MPJuguetesInfantil.master.cs">
+      <DependentUpon>MPJuguetesInfantil.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Juguetes e Infantil\MPJuguetesInfantil.master.designer.cs">
+      <DependentUpon>MPJuguetesInfantil.master</DependentUpon>
+    </Compile>
+    <Compile Include="Juguetes e Infantil\TiempoLibre.aspx.cs">
+      <DependentUpon>TiempoLibre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Juguetes e Infantil\TiempoLibre.aspx.designer.cs">
+      <DependentUpon>TiempoLibre.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Cliente.cs" />
@@ -851,6 +928,41 @@
     <Compile Include="Oficina\SistemasdeArchivo.aspx.designer.cs">
       <DependentUpon>SistemasdeArchivo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Papeleria\Cartones.aspx.cs">
+      <DependentUpon>Cartones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Papeleria\Cartones.aspx.designer.cs">
+      <DependentUpon>Cartones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Papeleria\Cartulina.aspx.cs">
+      <DependentUpon>Cartulina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Papeleria\Cartulina.aspx.designer.cs">
+      <DependentUpon>Cartulina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Papeleria\MPPapeleria.master.cs">
+      <DependentUpon>MPPapeleria.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Papeleria\MPPapeleria.master.designer.cs">
+      <DependentUpon>MPPapeleria.master</DependentUpon>
+    </Compile>
+    <Compile Include="Papeleria\OtrosPapeles.aspx.cs">
+      <DependentUpon>OtrosPapeles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Papeleria\OtrosPapeles.aspx.designer.cs">
+      <DependentUpon>OtrosPapeles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Papeleria\PapelesFotocopia.aspx.cs">
+      <DependentUpon>PapelesFotocopia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Papeleria\PapelesFotocopia.aspx.designer.cs">
+      <DependentUpon>PapelesFotocopia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Persistencia\BaseDAO.cs" />
     <Compile Include="Persistencia\CategoriaDAO.cs" />
     <Compile Include="Persistencia\ClienteDAO.cs" />
@@ -878,7 +990,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Marcas\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

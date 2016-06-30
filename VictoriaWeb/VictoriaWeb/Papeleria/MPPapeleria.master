@@ -1,0 +1,16 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="MPPapeleria.master.cs" Inherits="VictoriaWeb.Papeleria.MPPapeleria" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContenidoMenuContextual" runat="server">
+    <ul id="MenuContextual">
+        <li><a href="Cartones.aspx">Cartones</a></li>
+        <li><a href="Cartulina.aspx">Cartulina</a></li>
+        <li><a href="PapelesFotocopia.aspx">Papeles para Fotocopia</a></li>
+        <li><a href="OtrosPapeles.aspx">Otros Papeles</a></li>
+    </ul>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContenidoPrincipal" runat="server">
+    <asp:ContentPlaceHolder ID="ContenidoPrincipal" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</asp:Content>

@@ -1,4 +1,5 @@
-﻿body {
+﻿body {    width: 990px;
+    margin-left: 274px;
 }
 #Cabecera {
     height:150px;
@@ -8,16 +9,19 @@
     /*box-shadow:0px 0px 10px #000;*/
     position:relative;
     z-index:2;
+    top: 0px;
+    left: 11px;
+    width: 978px;
 }
 #ContenidoCabecera {
-    width:900px;
-    margin:auto;
+    width:980px;
+    margin:auto auto auto 3px;
 }
 #BarraHorizontal {
-    height:40px;
-    background-color:#A64E06;
-    border-radius:0px 0px 10px 0px;
-    box-shadow:0px 0px 10px #000 inset;
+    height:45px;
+    background-color:white;
+    /*border-radius:0px 0px 10px 0px;
+    box-shadow:0px 0px 10px #000 inset;*/
     text-align:center;
 }
 
@@ -69,7 +73,7 @@
     }
 
 #Bajo {
-    width:900px;
+    width:898px;
     margin:auto;
     background-color:#FF9A40;
     border-radius:0px 0px 20px 20px;
@@ -97,7 +101,7 @@
    #MenuContextual > li{
         padding:10px;
         text-align:center;
-        background-color:#A64E06;
+        background-color:#009e44;
         color:white;
         border:1px outset #A64E06;
         /*box-shadow:0px 0px 10px #000 inset;*/
@@ -117,7 +121,7 @@
 }
 
 #Pie {
-    height:30px;
+    height:105px;
     background-color:#b6ff00;
     border-radius:0px 0px 20px 20px;
     clear:both;
@@ -125,5 +129,6 @@
     color:white;
     text-align:center;
     padding-top:5px;
+    margin-top: 137px;
 }
     

@@ -6,10 +6,10 @@
         <li><a href="DibujoPintura.aspx">Dibujos y Pintura</a></li>
         <li><a href="FolderANDCarpetas.aspx">Folder y Carpetas</a></li>
         <li><a href="ForrosEtiquetasTijeras.aspx">Forros,Etiquetas y Tijeras</a></li>
-        <li><a href="LapicerosANDPortaminas.aspx">Lpiceros y Portaminas</a></li>
+        <li><a href="LapicerosANDPortaminas.aspx">Lapiceros y Portaminas</a></li>
         <li><a href="MochilasLoncherasCartucheras.aspx">Mochilas,Loncheras y Cartucheras</a></li>
         <li><a href="PegamentosLimpiatipos.aspx">Pegamentos y Limpiatipos</a></li>
-        <li><a href="PlastelinasCeramicas.aspx">PLastelinas y Cerámicas</a></li>
+        <li><a href="PlastelinasCeramicas.aspx">Plastelinas y Cerámicas</a></li>
     </ul>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContenidoPrincipal" runat="server">

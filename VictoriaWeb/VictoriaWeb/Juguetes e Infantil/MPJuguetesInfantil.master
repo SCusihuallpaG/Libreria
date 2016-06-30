@@ -1,0 +1,15 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="MPJuguetesInfantil.master.cs" Inherits="VictoriaWeb.Juguetes_e_Infantil.MPJuguetesInfantil" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContenidoMenuContextual" runat="server">
+    <ul id="MenuContextual">
+        <li><a href="Bebes.aspx">Juguetes para Bebés</a></li>
+        <li><a href="Juguetes.aspx">Juguetes Niños Mayores de 5 años</a></li>
+        <li><a href="TiempoLibre.aspx">Tiempo Libre</a></li>
+    </ul>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContenidoPrincipal" runat="server">
+    <asp:ContentPlaceHolder ID="ContenidoPrincipal" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</asp:Content>

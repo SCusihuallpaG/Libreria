@@ -8,10 +8,15 @@
     <title>Comprar Online a los mejores precios!!!</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #ColumnDerecha {
+            height: 59px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">        
-    <div>
+    <div style="height: 485px">
         <%--Cabecera--%>
         <div id="Cabecera">
             <%--Contenido Cabecera--%>
@@ -19,11 +24,14 @@
                 <%--Barra Horizontal --%>
                 <div id="BarraHorizontal">
                     <ul>
-                        <li><a href="/Default.aspx">    Home </a> </li>
-                        <li><a href="/Oficina/ArticulosEscritorio.aspx">Artículos de Oficina</a> </li>
+                        <%--<li><a href="/Default.aspx">    Home </a> </li>--%>
+                        <%--<li><a href="/Oficina/ArticulosEscritorio.aspx">Artículos de Oficina</a> </li>
                         <li><a href="/Escolares/DibujoPintura.aspx">Artículos Escolares</a></li>
                         <li><a href="/Arte y Diseño/Accesorios.aspx">Arte y Diseño</a></li>
                         <li><a href="/Computo y Electronica/Almacenamiento.aspx">Cómputo y Electrónica</a></li>
+                        <li><a href="/Cuadernos y Textos/AgendasGuias.aspx">Agendas y Guias</a></li>
+                        <li><a href="/Juguetes e Infantil/Bebes.aspx">Juguetes</a></li>
+                        <li><a href="/Papeleria/Cartones.aspx">Papeleria</a></li>--%>
                     </ul>
                 </div>      
                 <%--Logotipo--%>
@@ -48,7 +56,7 @@
             </div>
             <%--Columna Central--%>
             <div id="ColumnCentro">
-                <img src="Images/Animacion12.jpg"width="800" height="500"/>  
+                 
                 <asp:ContentPlaceHolder ID="ContenidoPrincipal" runat="server">
         
                 </asp:ContentPlaceHolder>

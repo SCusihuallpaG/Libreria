@@ -7,18 +7,18 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace VictoriaWeb {
+namespace VictoriaWeb.Juguetes_e_Infantil {
     
     
-    public partial class Default {
+    public partial class MPJuguetesInfantil {
         
         /// <summary>
-        /// Control dlListado.
+        /// Control ContenidoPrincipal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dlListado;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContenidoPrincipal;
     }
 }

@@ -7,18 +7,9 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace VictoriaWeb {
+namespace VictoriaWeb.Juguetes_e_Infantil {
     
     
-    public partial class Default {
-        
-        /// <summary>
-        /// Control dlListado.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dlListado;
+    public partial class Juguetes {
     }
 }
