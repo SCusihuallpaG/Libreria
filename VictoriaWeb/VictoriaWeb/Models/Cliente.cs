@@ -14,7 +14,7 @@ namespace VictoriaWeb.Dominio
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public Usuario Usuario { get; set; }
-        public TipoDocumento TipoDocumentoID { get; set; }
-        public Distrito DistritoID { get; set; }
+        public TipoDocumento TipoDocumento { get; set; }
+        public Distrito Distrito { get; set; }
     }
 }

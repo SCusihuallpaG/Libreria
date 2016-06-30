@@ -10,7 +10,7 @@ namespace VictoriaWeb.Dominio
         public int PedidoID { get; set; }
         public DateTime Fecha { get; set; }
         public string Observacion { get; set; }
-        public Cliente ClienteID { get; set; }
+        public Cliente Cliente { get; set; }
 
     }
 }

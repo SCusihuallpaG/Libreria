@@ -5,8 +5,8 @@
                    default-lazy="false">
   <class name="DetallePedido" table="DetallePedido">
     <composite-id>
-      <key-many-to-one name="Pedido" column="IdPedido" />
-      <key-many-to-one name="Producto" column="IdProducto" />
+      <key-many-to-one name="Pedido" column="PedidoID" />
+      <key-many-to-one name="Producto" column="ProductoID" />
     </composite-id>
     <property name="IGV" column="IGV" />
     <property name="Cantidad" column="Cantidad" />

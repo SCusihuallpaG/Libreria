@@ -7,9 +7,6 @@
     <id name="TipoProdID" access="property" column="TipoProdID">
       <generator class="native" />
     </id>
-    <property name="CodigoTipoProducto" column="CodigoTipoProducto" />
     <property name="Nombre" column="Nombre" />
-    <property name="Descripcion" column="Descripcion" />
-    <many-to-one name="SubTipoPro" column="SubTipoPro" />
   </class>
 </hibernate-mapping>

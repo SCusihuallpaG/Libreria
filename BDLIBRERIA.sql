@@ -6,21 +6,21 @@ Go
 
 CREATE TABLE Usuario(
 Usuario char(5) primary key,
-nick varchar(15) unique not null,
+Nick varchar(15) unique not null,
 Contrasena char(3)not null
 )
 GO
 
 CREATE TABLE TipoEmpleado(
 TipoEmpleadoID int Identity(1,1) not null primary key,
-Descripcion varchar(20) unique  not null
+Descripcion varchar(100) unique  not null
 )
 GO
 
 
 CREATE TABLE TipoDocumento(
 TipoDocumentoID int Identity(1,1) not null primary key,
-ruc varchar(10) not null
+Ruc varchar(11) not null
 )
 GO
 
@@ -32,8 +32,8 @@ NombreDist varchar(50),
 GO
 
 CREATE TABLE Marca(
-MarcaID int Identity not null primary key,
-Nombre varchar(30)not null,
+MarcaID int Identity(1,1) not null primary key,
+Nombre varchar(60)not null,
 )
 GO
 
@@ -41,21 +41,22 @@ GO
 
 CREATE TABLE TipoProducto(
 TipoProdID int Identity not null primary key,
-Nombre varchar(30),
+Nombre varchar(60),
 
 )
 GO
 
 
+
 CREATE TABLE Categoria(
 CategoriaID char(3) not null primary key,
-Nombre varchar(30) not null
+Nombre varchar(60) not null
 )
 GO
 
 create table SubCategoria(
 SubCatID char(5) not null primary key,
-Nombre varchar(30) not null,
+Nombre varchar(60) not null,
 CategoriaID char(3)
 constraint fk_SubCategoria_Categoria foreign key(CategoriaID ) references Categoria(CategoriaID ),
 )
@@ -105,20 +106,22 @@ constraint fk_Pedido_Cliente foreign key (ClienteID)references Cliente(ClienteID
 GO
 
 CREATE TABLE Producto(
-ProductoID int Identity(1,1) not null primary key,
-Nombre varchar(30) not null,
-descripcion varchar(30),
+ProductoID int Identity(100,3) not null primary key,
+Nombre varchar(60) not null,
+Descripcion varchar(100),
 MarcaID int not null,
-color varchar(15),
-tamaño varchar(10),
+Color varchar(15),
+Tamano varchar(10),
+UNIDMedida varchar(15),
 Precio decimal(5,2) not null,
 Stock int not null,
 Foto image,
-TipoProdId int not null,
+TipoProdID int not null,
 SubCatID char(5)not null,
-constraint fk_Producto_tipo foreign key (TipoProdId)references TipoProducto(TipoProdId),
+constraint fk_Producto_tipo foreign key (TipoProdID)references TipoProducto(TipoProdID),
 constraint fk_Producto_Marca foreign key (MarcaID)references Marca(MarcaID),
 constraint fk_Producto_SubCategoria foreign key(SubCatID ) references SubCategoria(SubCatID ),
+
 )
 GO
 
@@ -197,12 +200,14 @@ GO
 SELECT * FROM Cliente
 GO
 
+
 INSERT INTO Marca VALUES ('ARTESCO')
 INSERT INTO Marca VALUES ('ACRIMET')
 INSERT INTO Marca VALUES ('ALLEANZA')
 INSERT INTO Marca VALUES ('ANGEL')
 INSERT INTO Marca VALUES ('ATHLAS')
 INSERT INTO Marca VALUES ('ARTI CREATIVO')
+INSERT INTO Marca VALUES ('ALPHA')
 INSERT INTO Marca VALUES ('BIC')
 INSERT INTO Marca VALUES ('BANTEX')
 INSERT INTO Marca VALUES ('BOOMCO')
@@ -248,6 +253,7 @@ INSERT INTO Marca VALUES ('LAYCONSA')
 INSERT INTO Marca VALUES ('LASA CORP')
 INSERT INTO Marca VALUES ('LOGITECH')
 INSERT INTO Marca VALUES ('LEGO')
+INSERT INTO Marca VALUES ('LEITZ')
 INSERT INTO Marca VALUES ('LORO')
 INSERT INTO Marca VALUES ('LIQUID PAPER')
 INSERT INTO Marca VALUES ('MAPED')
@@ -261,10 +267,12 @@ INSERT INTO Marca VALUES ('MATCHBOX')
 INSERT INTO Marca VALUES ('MEMORIS')
 INSERT INTO Marca VALUES ('NORTON')
 INSERT INTO Marca VALUES ('NJOY TECH')
+INSERT INTO Marca VALUES ('NORIS')
 INSERT INTO Marca VALUES ('NORMA')
 INSERT INTO Marca VALUES ('NOTE FIX')
 INSERT INTO Marca VALUES ('OFFICE PAPER')
 INSERT INTO Marca VALUES ('OVE')
+INSERT INTO Marca VALUES ('OLFA')
 INSERT INTO Marca VALUES ('OTROS')
 INSERT INTO Marca VALUES ('OXFORD')
 INSERT INTO Marca VALUES ('PLAY-DOH')
@@ -318,23 +326,6 @@ INSERT INTO Marca VALUES ('YOOBAO')
 INSERT INTO Marca VALUES ('ZIGZAG')
 Go
 
-INSERT INTO Marca VALUES ('LEITZ')
-INSERT INTO Marca VALUES ('OLFA')
-INSERT INTO Marca VALUES ('NORIS')
-INSERT INTO Marca VALUES ('')
-INSERT INTO Marca VALUES ('')
-INSERT INTO Marca VALUES ('')
-INSERT INTO Marca VALUES ('')
-INSERT INTO Marca VALUES ('')
-INSERT INTO Marca VALUES ('')
-INSERT INTO Marca VALUES ('')
-INSERT INTO Marca VALUES ('')
-INSERT INTO Marca VALUES ('')
-INSERT INTO Marca VALUES ('')
-INSERT INTO Marca VALUES ('')
-INSERT INTO Marca VALUES ('')
-go
-
 SELECT * FROM Marca
 GO
 
@@ -352,67 +343,172 @@ select * from Categoria
 Go
 
 INSERT INTO SubCategoria VALUES ('SC001','Artículos de Escritorio','C01')
-INSERT INTO SubCategoria VALUES ('SC001','Boligrafos Finos','C01')
-INSERT INTO SubCategoria VALUES ('SC001','Aderentes','C01')
-INSERT INTO SubCategoria VALUES ('SC001','Formatos Administrativos y contables','C01')
-INSERT INTO SubCategoria VALUES ('SC001','sistema de Archivo','C01')
-INSERT INTO SubCategoria VALUES ('SC001','Artículos varios','C01')
-INSERT INTO SubCategoria VALUES ('SC001','Escritura','C02')
-INSERT INTO SubCategoria VALUES ('SC001','Dibujo y Pintura','C02')
-INSERT INTO SubCategoria VALUES ('SC001','Etiqueta, Forros y Tijeras','C02')
-INSERT INTO SubCategoria VALUES ('SC001','Folders y Carpetas','C02')
-INSERT INTO SubCategoria VALUES ('SC001','Plastilina y Cerámicas','C02')
-INSERT INTO SubCategoria VALUES ('SC001','Pegamentos y Limpiatípos','C02')
-INSERT INTO SubCategoria VALUES ('SC001','Acsesorios Escolares','C02')
-INSERT INTO SubCategoria VALUES ('SC001','tóner, Tintas y Cintas','C03')
-INSERT INTO SubCategoria VALUES ('SC001','Almacenamiento','C03')
-INSERT INTO SubCategoria VALUES ('SC001','Audio y video','C03')
-INSERT INTO SubCategoria VALUES ('SC001','Cables','C03')
-INSERT INTO SubCategoria VALUES ('SC001','Calculadoras','C03')
-INSERT INTO SubCategoria VALUES ('SC001','Teclado y Mouses','C03')
-INSERT INTO SubCategoria VALUES ('SC001','Artículos varios','C03')
-INSERT INTO SubCategoria VALUES ('SC001','Videojuegos y Consolas','C03')
-INSERT INTO SubCategoria VALUES ('SC001','Cuadernos','C04')
-INSERT INTO SubCategoria VALUES ('SC001','Blocks','C04')
-INSERT INTO SubCategoria VALUES ('SC001','Cuentos','C04')
-INSERT INTO SubCategoria VALUES ('SC001','Agendas y Guías','C04')
-INSERT INTO SubCategoria VALUES ('SC001','Juguetes','C05')
-INSERT INTO SubCategoria VALUES ('SC001','Bebés','C05')
-INSERT INTO SubCategoria VALUES ('SC001','Tiempo Libre','C05')
-INSERT INTO SubCategoria VALUES ('SC001','Cartones','C06')
-INSERT INTO SubCategoria VALUES ('SC001','Papel Fotocopia','C06')
-INSERT INTO SubCategoria VALUES ('SC001','Papel Varios','C06')
-INSERT INTO SubCategoria VALUES ('SC001','Cartulinas','C06')
-INSERT INTO SubCategoria VALUES ('SC001','Papel Artístico','C07')
-INSERT INTO SubCategoria VALUES ('SC001','Acsesorios','C07')
-INSERT INTO SubCategoria VALUES ('SC001','Dibujo/ Ilusracíon','C07')
-INSERT INTO SubCategoria VALUES ('SC001','Pinceles','C07')
-INSERT INTO SubCategoria VALUES ('SC001','Pinturas','C07')
-INSERT INTO SubCategoria VALUES ('SC001','Soporte','C07')
+INSERT INTO SubCategoria VALUES ('SC002','Boligrafos Finos','C01')
+INSERT INTO SubCategoria VALUES ('SC003','Aderentes','C01')
+INSERT INTO SubCategoria VALUES ('SC004','Formatos Administrativos y contables','C01')
+INSERT INTO SubCategoria VALUES ('SC005','sistema de Archivo','C01')
+INSERT INTO SubCategoria VALUES ('SC006','Artículos varios','C01')
+INSERT INTO SubCategoria VALUES ('SC007','Escritura','C02')
+INSERT INTO SubCategoria VALUES ('SC008','Dibujo y Pintura','C02')
+INSERT INTO SubCategoria VALUES ('SC009','Etiqueta, Forros y Tijeras','C02')
+INSERT INTO SubCategoria VALUES ('SC010','Folders y Carpetas','C02')
+INSERT INTO SubCategoria VALUES ('SC011','Plastilina y Cerámicas','C02')
+INSERT INTO SubCategoria VALUES ('SC012','Pegamentos y Limpiatípos','C02')
+INSERT INTO SubCategoria VALUES ('SC013','Acsesorios Escolares','C02')
+INSERT INTO SubCategoria VALUES ('SC014','tóner, Tintas y Cintas','C03')
+INSERT INTO SubCategoria VALUES ('SC015','Almacenamiento','C03')
+INSERT INTO SubCategoria VALUES ('SC016','Audio y video','C03')
+INSERT INTO SubCategoria VALUES ('SC017','Cables','C03')
+INSERT INTO SubCategoria VALUES ('SC018','Calculadoras','C03')
+INSERT INTO SubCategoria VALUES ('SC019','Teclado y Mouses','C03')
+INSERT INTO SubCategoria VALUES ('SC020','Artículos varios','C03')
+INSERT INTO SubCategoria VALUES ('SC021','Videojuegos y Consolas','C03')
+INSERT INTO SubCategoria VALUES ('SC022','Cuadernos','C04')
+INSERT INTO SubCategoria VALUES ('SC023','Blocks','C04')
+INSERT INTO SubCategoria VALUES ('SC024','Cuentos','C04')
+INSERT INTO SubCategoria VALUES ('SC025','Agendas y Guías','C04')
+INSERT INTO SubCategoria VALUES ('SC026','Juguetes','C05')
+INSERT INTO SubCategoria VALUES ('SC027','Bebés','C05')
+INSERT INTO SubCategoria VALUES ('SC029','Cartones','C06')
+INSERT INTO SubCategoria VALUES ('SC030','Papel Fotocopia','C06')
+INSERT INTO SubCategoria VALUES ('SC031','Papel Varios','C06')
+INSERT INTO SubCategoria VALUES ('SC032','Cartulinas','C06')
+INSERT INTO SubCategoria VALUES ('SC033','Papel Artístico','C07')
+INSERT INTO SubCategoria VALUES ('SC034','Acsesorios','C07')
+INSERT INTO SubCategoria VALUES ('SC035','Dibujo/ Ilusracíon','C07')
+INSERT INTO SubCategoria VALUES ('SC036','Pinceles','C07')
+INSERT INTO SubCategoria VALUES ('SC037','Pinturas','C07')
+INSERT INTO SubCategoria VALUES ('SC038','Soporte','C07')
 
 GO
 select * from SubCategoria
 GO
 
-Insert into TipoProducto values('')
+Insert into TipoProducto values('Fechadores')
+Insert into TipoProducto values('bandejas')
+Insert into TipoProducto values('clips,chinches')
+Insert into TipoProducto values('Dispensadores')
+Insert into TipoProducto values('Emgrapadoras')
+Insert into TipoProducto values('ligas')
+Insert into TipoProducto values('Notas Adhesivas')
+Insert into TipoProducto values('Organizadoras')
+Insert into TipoProducto values('Perforadores')
+Insert into TipoProducto values('Tampón')
+Insert into TipoProducto values('Tijeras')
+Insert into TipoProducto values('Cuchillas')
+Insert into TipoProducto values('Guillotinas')
+Insert into TipoProducto values('tintas para Tampón')
+Insert into TipoProducto values('Plumones')
+Insert into TipoProducto values('Reglas')
+Insert into TipoProducto values('Correctores')
+Insert into TipoProducto values('Lapiceros')
+Insert into TipoProducto values('Resaltadores')
+Insert into TipoProducto values('Bolígrafos')
+Insert into TipoProducto values('Pegamentos')
+Insert into TipoProducto values('Cintas Adhesivas')
+Insert into TipoProducto values('Etiquetas')
+Insert into TipoProducto values('Formatos Contables')
+Insert into TipoProducto values('Formatos contínuos')
+Insert into TipoProducto values('Archivadores')
+Insert into TipoProducto values('Sujetadores')
+Insert into TipoProducto values('Files')
+Insert into TipoProducto values('Portapapeles')
+Insert into TipoProducto values('Sobres')
+Insert into TipoProducto values('Tableros')
+Insert into TipoProducto values('Separadores')
+Insert into TipoProducto values('Articulos de Aseo')
+Insert into TipoProducto values('papeleras')
+Insert into TipoProducto values('Pizarras')
+Insert into TipoProducto values('Señalizacion')
+Insert into TipoProducto values('Portaminas')
+Insert into TipoProducto values('Colores')
+Insert into TipoProducto values('Crayones')
+Insert into TipoProducto values('Témperas')
+Insert into TipoProducto values('Mota')
+Insert into TipoProducto values('Tijeras escolares')
+Insert into TipoProducto values('Forro')
+Insert into TipoProducto values('Folders')
+Insert into TipoProducto values('plastilinas')
+Insert into TipoProducto values('Cerámicas en Frío')
+Insert into TipoProducto values('colas')
+Insert into TipoProducto values('Goma Escarchada')
+Insert into TipoProducto values('Gomas Líquidas')
+Insert into TipoProducto values('Limpiatipos')
+Insert into TipoProducto values('Pegamento en barra')
+Insert into TipoProducto values('Siliconas')
+Insert into TipoProducto values('Mochilas')
+Insert into TipoProducto values('Loncheras')
+Insert into TipoProducto values('Cartucheras')
+Insert into TipoProducto values('Tintas')
+Insert into TipoProducto values('Cintas')
+Insert into TipoProducto values('Tóners')
+Insert into TipoProducto values('CDs')
+Insert into TipoProducto values('Discos Duros Esternos')
+Insert into TipoProducto values('DVDs')
+Insert into TipoProducto values('Memorias SD')
+Insert into TipoProducto values('Porta CDs')
+Insert into TipoProducto values('USB')
+Insert into TipoProducto values('Audífonos')
+Insert into TipoProducto values('Camara web')
+Insert into TipoProducto values('Parlantes')
+Insert into TipoProducto values('Cables Poder')
+Insert into TipoProducto values('Cables USB')
+Insert into TipoProducto values('Calculadoras')
+Insert into TipoProducto values('Mouse')
+Insert into TipoProducto values('Mouse PAd')
+Insert into TipoProducto values('Teclados')
+Insert into TipoProducto values('Pilas')
+Insert into TipoProducto values('Accesorios')
+Insert into TipoProducto values('Video juegos')
+Insert into TipoProducto values('Cudernos')
+Insert into TipoProducto values('Bolcks Anillado')
+Insert into TipoProducto values('Blocks')
+Insert into TipoProducto values('Blocks de Dibujo')
+Insert into TipoProducto values('Blocks Taquigrafía')
+Insert into TipoProducto values('Cuaderno Anillado')
+Insert into TipoProducto values('Cuentos')
+Insert into TipoProducto values('Libro de Actividades')
+Insert into TipoProducto values('Agenda')
+Insert into TipoProducto values('Libretas')
+Insert into TipoProducto values('Guías')
+Insert into TipoProducto values('Didacticos')
+Insert into TipoProducto values('Niñas')
+Insert into TipoProducto values('Niños')
+Insert into TipoProducto values('Juegos de Mesa')
+Insert into TipoProducto values('Didactico bebé')
+Insert into TipoProducto values('Cuidado')
+Insert into TipoProducto values('Carton Corrugado')
+Insert into TipoProducto values('Carton Duplex')
+Insert into TipoProducto values('Papel Fotocopia')
+Insert into TipoProducto values('Papel Carbon')
+Insert into TipoProducto values('celofán')
+Insert into TipoProducto values('Hoja Contómetro')
+Insert into TipoProducto values('Papel Lustre')
+Insert into TipoProducto values('Papel Oficio')
+Insert into TipoProducto values('Papel Periodico')
+Insert into TipoProducto values('Papel Seda')
+Insert into TipoProducto values('Cartulina Escolar')
+Insert into TipoProducto values('Cartulina')
+Insert into TipoProducto values('Block')
+Insert into TipoProducto values('Accesorios Art')
+Insert into TipoProducto values('Bistro')
+Insert into TipoProducto values('Carbón')
+Insert into TipoProducto values('Grafito')
+Insert into TipoProducto values('Lapiz Color')
+Insert into TipoProducto values('Marcadores Art')
+Insert into TipoProducto values('Lapíz Pastel')
+Insert into TipoProducto values('Lapíz Graso')
+Insert into TipoProducto values('Tiza Pastel')
+Insert into TipoProducto values('Tiza Pastel Óleo')
+Insert into TipoProducto values('Pincel Redondo')
+Insert into TipoProducto values('Pincel Plano')
+Insert into TipoProducto values('Solventes')
+Insert into TipoProducto values('Acrílicos')
+Insert into TipoProducto values('Oleos')
+Insert into TipoProducto values('Acuarelas')
+Insert into TipoProducto values('Caballete')
+Insert into TipoProducto values('Lienzo')
 
 Select *  from TipoProducto
 GO
-
-
---Boleta
-INSERT INTO Pedido VALUES ('','')
-
-SELECT * FROM Pedido
-
---Producto
-
-INSERT INTO Producto VALUES ('','','','','','')
-
-SELECT * FROM Producto
-
---DetalleBoleta
-INSERT INTO DetallePedido VALUES ('','','','','','')
-
-SELECT * FROM DetallePedido
 

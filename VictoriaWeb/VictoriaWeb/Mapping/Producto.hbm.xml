@@ -8,10 +8,15 @@
       <generator class="native" />
     </id>
     <property name="Nombre" column="Nombre" />
-    <many-to-one name="MarcaID" column="MarcaID" />
+    <property name="Descripcion" column="Descripcion" />
+    <many-to-one name="Marca" column="MarcaID" />
+    <property name="Color" column="Color" />
+    <property name="Tamano" column="Tamano" />
+    <property name="UNIDMedida" column="UNIDMedida" />
     <property name="Precio" column="Precio" />
     <property name="Stock" column="Stock" />
-    <!--acá iría la foto pero no se como se hace :v-->
-    <many-to-one name="TipoProdId" column="TipoProdId" />
+    <property name="Foto" column="Foto" length="2147483647" />
+    <many-to-one name="TipoProd" column="TipoProdID" />
+    <many-to-one name="SubCat" column="SubCatID" />
   </class>
 </hibernate-mapping>
