@@ -20,7 +20,8 @@
                 <div id="BarraHorizontal">
                     <ul>
                         <li><a href="/Default.aspx">    Home </a> </li>   
-                        <li><a href="/Productos/AgregarProductos.aspx">Productos</a> </li>                       
+                        <li><a href="/Productos/AgregarProductos.aspx">Productos</a> </li>
+                        <li><a href="/Oficina/ArticulosEscritorio.aspx">Artículos de Oficina</a> </li>
                     </ul>
                 </div>      
                 <%--Logotipo--%>

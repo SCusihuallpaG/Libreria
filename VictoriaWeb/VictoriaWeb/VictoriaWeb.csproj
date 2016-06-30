@@ -60,11 +60,14 @@
     <Content Include="App_Themes\Tema1\Estilos.css" />
     <Content Include="Default.aspx" />
     <Content Include="Images\utiles-escolares_03_med_hr.jpg" />
+    <Content Include="Oficina\ArticulosEscritorio.aspx" />
+    <Content Include="Oficina\BoligrafosFinos.aspx" />
     <Content Include="Principal.Master" />
     <Content Include="Productos\AgregarProductos.aspx" />
     <Content Include="Productos\DatosProducto.aspx" />
     <Content Include="Productos\ListaProductos.aspx" />
     <Content Include="Productos\MPProductos.master" />
+    <Content Include="Oficina\MPOficina.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -130,6 +133,27 @@
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Oficina\ArticulosEscritorio.aspx.cs">
+      <DependentUpon>ArticulosEscritorio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oficina\ArticulosEscritorio.aspx.designer.cs">
+      <DependentUpon>ArticulosEscritorio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Oficina\BoligrafosFinos.aspx.cs">
+      <DependentUpon>BoligrafosFinos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oficina\BoligrafosFinos.aspx.designer.cs">
+      <DependentUpon>BoligrafosFinos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Oficina\MPOficina.master.cs">
+      <DependentUpon>MPOficina.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oficina\MPOficina.master.designer.cs">
+      <DependentUpon>MPOficina.master</DependentUpon>
     </Compile>
     <Compile Include="Principal.Master.cs">
       <DependentUpon>Principal.Master</DependentUpon>
