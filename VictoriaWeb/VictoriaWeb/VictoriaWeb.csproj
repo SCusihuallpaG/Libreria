@@ -647,8 +647,14 @@
       <DependentUpon>MPOficina.master</DependentUpon>
     </Compile>
     <Compile Include="Persistencia\BaseDAO.cs" />
+    <Compile Include="Persistencia\CategoriaDAO.cs" />
     <Compile Include="Persistencia\ConexionUtil.cs" />
+    <Compile Include="Persistencia\DistritoDAO.cs" />
+    <Compile Include="Persistencia\MarcaDAO.cs" />
     <Compile Include="Persistencia\NHibernateHelper.cs" />
+    <Compile Include="Persistencia\TipoDocumentoDAO.cs" />
+    <Compile Include="Persistencia\TipoEmpleadoDAO.cs" />
+    <Compile Include="Persistencia\TipoProductoDAO.cs" />
     <Compile Include="Principal.Master.cs">
       <DependentUpon>Principal.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
