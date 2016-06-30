@@ -15,6 +15,6 @@
     <property name="Direccion" column="Direccion" />
     <property name="Telefono" column="Telefono" />
     <many-to-one name="Usuario" column="Usuario" />
-    <many-to-one name="DistritoID" column="DistritoID"/>
+    <many-to-one name="Distrito" column="DistritoID"/>
   </class>
 </hibernate-mapping>

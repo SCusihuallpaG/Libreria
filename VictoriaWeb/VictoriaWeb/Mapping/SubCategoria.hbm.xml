@@ -8,6 +8,6 @@
       <generator class="native" />
     </id>
     <property name="Nombre" column="Nombre" />
-    <many-to-one name="CategoriaID" column="CategoriaID" />
+    <many-to-one name="Categoria" column="CategoriaID" />
   </class>
 </hibernate-mapping>

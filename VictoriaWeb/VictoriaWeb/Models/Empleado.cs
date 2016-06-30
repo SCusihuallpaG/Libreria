@@ -8,7 +8,7 @@ namespace VictoriaWeb.Dominio
     public class Empleado
     {
         public int EmpleadoID { get; set; }
-        public TipoEmpleado TipoEmpleadoID { get; set; }
+        public TipoEmpleado TipoEmpleado { get; set; }
         public string Nombre { get; set; }
         public string ApellidoPaterno { get; set; }
         public string ApellidoMaterno { get; set; }
@@ -16,7 +16,7 @@ namespace VictoriaWeb.Dominio
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public Usuario Usuario { get; set; }
-        public Distrito DistritoID { get; set; }
+        public Distrito Distrito { get; set; }
 
 
     }
