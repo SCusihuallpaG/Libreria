@@ -56,7 +56,7 @@ GO
 
 create table SubCategoria(
 SubCatID char(5) not null primary key,
-Nombre varchar(30) not null,
+Nombre varchar(60) not null,
 CategoriaID char(3)
 constraint fk_SubCategoria_Categoria foreign key(CategoriaID ) references Categoria(CategoriaID ),
 )
