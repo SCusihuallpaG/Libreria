@@ -4,3 +4,5 @@ D:\SISE\Ciclo 4\Desarrollo e Implementacion de Aplicaciones Web\Proyecto-Libreri
 D:\SISE\Ciclo 4\Desarrollo e Implementacion de Aplicaciones Web\Proyecto-Libreria\Libreria\VictoriaWeb\VictoriaWeb\bin\VictoriaWeb.pdb
 D:\SISE\Ciclo 4\Desarrollo e Implementacion de Aplicaciones Web\Proyecto-Libreria\Libreria\VictoriaWeb\VictoriaWeb\obj\Debug\VictoriaWeb.dll
 D:\SISE\Ciclo 4\Desarrollo e Implementacion de Aplicaciones Web\Proyecto-Libreria\Libreria\VictoriaWeb\VictoriaWeb\obj\Debug\VictoriaWeb.pdb
+D:\SISE\Ciclo 4\Desarrollo e Implementacion de Aplicaciones Web\Proyecto-Libreria\Libreria\VictoriaWeb\VictoriaWeb\bin\Iesi.Collections.dll
+D:\SISE\Ciclo 4\Desarrollo e Implementacion de Aplicaciones Web\Proyecto-Libreria\Libreria\VictoriaWeb\VictoriaWeb\bin\NHibernate.dll

@@ -22,6 +22,7 @@
                         <li><a href="/Default.aspx">    Home </a> </li>   
                         <li><a href="/Productos/AgregarProductos.aspx">Productos</a> </li>
                         <li><a href="/Oficina/ArticulosEscritorio.aspx">Artículos de Oficina</a> </li>
+                        <li><a href="/Escolares/DibujoPintura.aspx">Artículos Escolares</a></li>
                     </ul>
                 </div>      
                 <%--Logotipo--%>

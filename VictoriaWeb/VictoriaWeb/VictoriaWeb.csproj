@@ -39,11 +39,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Iesi.Collections">
-      <HintPath>G:\CICLO 4\Desarrollo e  Impl de App web\Hibernate\NHibernate\Iesi.Collections.dll</HintPath>
+      <HintPath>..\..\..\..\Web Form\Hibernate\NHibernate\Iesi.Collections.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="NHibernate">
-      <HintPath>G:\CICLO 4\Desarrollo e  Impl de App web\Hibernate\NHibernate\NHibernate.dll</HintPath>
+      <HintPath>..\..\..\..\Web Form\Hibernate\NHibernate\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -65,6 +65,14 @@
   <ItemGroup>
     <Content Include="App_Themes\Tema1\Estilos.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Escolares\ArticulosEscolares.aspx" />
+    <Content Include="Escolares\DibujoPintura.aspx" />
+    <Content Include="Escolares\FolderANDCarpetas.aspx" />
+    <Content Include="Escolares\ForrosEtiquetasTijeras.aspx" />
+    <Content Include="Escolares\LapicerosANDPortaminas.aspx" />
+    <Content Include="Escolares\MochilasLoncherasCartucheras.aspx" />
+    <Content Include="Escolares\PegamentosLimpiatipos.aspx" />
+    <Content Include="Escolares\PlastelinasCeramicas.aspx" />
     <Content Include="Images\Arte y Diseño\Accesorios\BORRADOR.jpg" />
     <Content Include="Images\Arte y Diseño\Accesorios\ENVASE PARA AGUA.jpg" />
     <Content Include="Images\Arte y Diseño\Accesorios\ENVASE PARA AGUA1.jpg" />
@@ -550,13 +558,18 @@
     <EmbeddedResource Include="Mapping\Categoria.hbm.xml" />
     <EmbeddedResource Include="Mapping\SubCategoria.hbm.xml" />
     <Content Include="Oficina\ArticulosEscritorio.aspx" />
+    <Content Include="Oficina\ArticulosVarios.aspx" />
     <Content Include="Oficina\BoligrafosFinos.aspx" />
+    <Content Include="Oficina\EtiquetasCintasPegamentos.aspx" />
+    <Content Include="Oficina\FormatosAdministrativosyContables.aspx" />
+    <Content Include="Oficina\SistemasdeArchivo.aspx" />
     <Content Include="Principal.Master" />
     <Content Include="Productos\AgregarProductos.aspx" />
     <Content Include="Productos\DatosProducto.aspx" />
     <Content Include="Productos\ListaProductos.aspx" />
     <Content Include="Productos\MPProductos.master" />
     <Content Include="Oficina\MPOficina.master" />
+    <Content Include="Escolares\MPEscolares.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -609,6 +622,69 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Escolares\ArticulosEscolares.aspx.cs">
+      <DependentUpon>ArticulosEscolares.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Escolares\ArticulosEscolares.aspx.designer.cs">
+      <DependentUpon>ArticulosEscolares.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Escolares\DibujoPintura.aspx.cs">
+      <DependentUpon>DibujoPintura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Escolares\DibujoPintura.aspx.designer.cs">
+      <DependentUpon>DibujoPintura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Escolares\FolderANDCarpetas.aspx.cs">
+      <DependentUpon>FolderANDCarpetas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Escolares\FolderANDCarpetas.aspx.designer.cs">
+      <DependentUpon>FolderANDCarpetas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Escolares\ForrosEtiquetasTijeras.aspx.cs">
+      <DependentUpon>ForrosEtiquetasTijeras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Escolares\ForrosEtiquetasTijeras.aspx.designer.cs">
+      <DependentUpon>ForrosEtiquetasTijeras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Escolares\LapicerosANDPortaminas.aspx.cs">
+      <DependentUpon>LapicerosANDPortaminas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Escolares\LapicerosANDPortaminas.aspx.designer.cs">
+      <DependentUpon>LapicerosANDPortaminas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Escolares\MochilasLoncherasCartucheras.aspx.cs">
+      <DependentUpon>MochilasLoncherasCartucheras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Escolares\MochilasLoncherasCartucheras.aspx.designer.cs">
+      <DependentUpon>MochilasLoncherasCartucheras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Escolares\MPEscolares.master.cs">
+      <DependentUpon>MPEscolares.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Escolares\MPEscolares.master.designer.cs">
+      <DependentUpon>MPEscolares.master</DependentUpon>
+    </Compile>
+    <Compile Include="Escolares\PegamentosLimpiatipos.aspx.cs">
+      <DependentUpon>PegamentosLimpiatipos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Escolares\PegamentosLimpiatipos.aspx.designer.cs">
+      <DependentUpon>PegamentosLimpiatipos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Escolares\PlastelinasCeramicas.aspx.cs">
+      <DependentUpon>PlastelinasCeramicas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Escolares\PlastelinasCeramicas.aspx.designer.cs">
+      <DependentUpon>PlastelinasCeramicas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\DetallePedido.cs" />
@@ -632,6 +708,13 @@
     <Compile Include="Oficina\ArticulosEscritorio.aspx.designer.cs">
       <DependentUpon>ArticulosEscritorio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Oficina\ArticulosVarios.aspx.cs">
+      <DependentUpon>ArticulosVarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oficina\ArticulosVarios.aspx.designer.cs">
+      <DependentUpon>ArticulosVarios.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Oficina\BoligrafosFinos.aspx.cs">
       <DependentUpon>BoligrafosFinos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -639,12 +722,33 @@
     <Compile Include="Oficina\BoligrafosFinos.aspx.designer.cs">
       <DependentUpon>BoligrafosFinos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Oficina\EtiquetasCintasPegamentos.aspx.cs">
+      <DependentUpon>EtiquetasCintasPegamentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oficina\EtiquetasCintasPegamentos.aspx.designer.cs">
+      <DependentUpon>EtiquetasCintasPegamentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Oficina\FormatosAdministrativosyContables.aspx.cs">
+      <DependentUpon>FormatosAdministrativosyContables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oficina\FormatosAdministrativosyContables.aspx.designer.cs">
+      <DependentUpon>FormatosAdministrativosyContables.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Oficina\MPOficina.master.cs">
       <DependentUpon>MPOficina.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Oficina\MPOficina.master.designer.cs">
       <DependentUpon>MPOficina.master</DependentUpon>
+    </Compile>
+    <Compile Include="Oficina\SistemasdeArchivo.aspx.cs">
+      <DependentUpon>SistemasdeArchivo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oficina\SistemasdeArchivo.aspx.designer.cs">
+      <DependentUpon>SistemasdeArchivo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Persistencia\BaseDAO.cs" />
     <Compile Include="Persistencia\CategoriaDAO.cs" />
