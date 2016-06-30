@@ -41,13 +41,28 @@ GO
 
 CREATE TABLE TipoProducto(
 TipoProdID int Identity not null primary key,
-CodigoTipoProducto varchar(5) Unique not null,
 Nombre varchar(30),
-Descripcion varchar(60) not null,
-SubTipoPro int,
-constraint  fk_Tipo_producto foreign key(SubTipoPro) references TipoProducto
 )
 GO
+
+
+CREATE TABLE Categoria(
+CategoriaID char(3) not null primary key,
+Nombre varchar(30) not null
+)
+GO
+
+create table SubCategoria(
+SubCatID char(5) not null primary key,
+Nombre varchar(30) not null,
+CategoriaID char(3)
+constraint fk_SubCategoria_Categoria foreign key(CategoriaID ) references Categoria(CategoriaID ),
+)
+GO
+
+
+
+
 
 CREATE TABLE Empleado(
 EmpleadoID int Identity(1,1) not null primary key,
@@ -60,9 +75,9 @@ Direccion varchar(150) not null,
 Telefono varchar(10) not null,
 Usuario char(5) not null unique,
 DistritoID int not null,
-constraint fk_TipoEmpleado_Empleado foreign key(TipoEmpleadoID) references TipoEmpleado(TipoEmpleadoID),
-constraint  fk_Distrito_Empleado foreign key(DistritoID) references Distrito(DistritoID),
-constraint  fk_Usuario_Empleado foreign key(Usuario) references Usuario(Usuario)
+constraint fk_Empleado_TipoEmpleado foreign key(TipoEmpleadoID) references TipoEmpleado(TipoEmpleadoID),
+constraint  fk_Empleado_Distrito foreign key(DistritoID) references Distrito(DistritoID),
+constraint  fk_Empleado_Usuario foreign key(Usuario) references Usuario(Usuario)
 )
 GO
 
@@ -77,9 +92,9 @@ Telefono varchar(10) not null,
 Usuario char(5) not null unique ,
 TipoDocumentoID int,
 DistritoID int not null,
-constraint  fk_Distrito_cliente foreign key(DistritoID) references Distrito(DistritoID),
-constraint  fk_TipoDocumento_cliente foreign key(TipoDocumentoID) references TipoDocumento(TipoDocumentoID),
-constraint  fk_Usuario_Cliente foreign key(Usuario) references Usuario(Usuario)
+constraint  fk_cliente_Distrito foreign key(DistritoID) references Distrito(DistritoID),
+constraint  fk_cliente_TipoDocumento foreign key(TipoDocumentoID) references TipoDocumento(TipoDocumentoID),
+constraint  fk_Cliente_Usuario foreign key(Usuario) references Usuario(Usuario)
 
 )
 GO
@@ -97,17 +112,18 @@ GO
 CREATE TABLE Producto(
 ProductoID int Identity(1,1) not null primary key,
 Nombre varchar(30) not null,
+descripcion varchar(30),
 MarcaID int not null,
+color varchar(15),
+tamaño varchar(10),
 Precio decimal(5,2) not null,
 Stock int not null,
 Foto image,
 TipoProdId int not null,
-constraint fk_Producto_tipo
-foreign key (TipoProdId)
-references TipoProducto(TipoProdId),
-constraint fk_Producto_Marca
-foreign key (MarcaID)
-references Marca(MarcaID)
+SubCatID char(5)not null,
+constraint fk_Producto_tipo foreign key (TipoProdId)references TipoProducto(TipoProdId),
+constraint fk_Producto_Marca foreign key (MarcaID)references Marca(MarcaID),
+constraint fk_Producto_SubCategoria foreign key(SubCatID ) references SubCategoria(SubCatID ),
 )
 GO
 
