@@ -7,9 +7,9 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace VictoriaWeb.Escolares {
+namespace VictoriaWeb.Arte_y_Diseño {
     
     
-    public partial class ForrosEtiquetasTijeras {
+    public partial class PincelesPinturas {
     }
 }

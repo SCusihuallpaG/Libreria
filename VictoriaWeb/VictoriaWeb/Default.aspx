@@ -4,5 +4,5 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContenidoMenuContextual" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContenidoPrincipal" runat="server">
-    <h2>Bienvenido</h2>
+    
 </asp:Content>

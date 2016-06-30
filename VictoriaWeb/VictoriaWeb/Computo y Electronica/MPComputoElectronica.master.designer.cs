@@ -7,10 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace VictoriaWeb.Productos {
+namespace VictoriaWeb.Computo_y_Electronica {
     
     
-    public partial class MPProductos {
+    public partial class MPComputoElectronica {
         
         /// <summary>
         /// Control ContenidoPrincipal.

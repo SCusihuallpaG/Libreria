@@ -3,8 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContenidoMenuContextual" runat="server">
     <ul id="MenuContextual">
-        <li><a href="ArticulosEscolares.aspx">Articulos Escolares</a></li>
-        <li><a href="DibujoPintura.aspx"></a>Dibujos y Pintura</li>
+        <li><a href="DibujoPintura.aspx">Dibujos y Pintura</a></li>
         <li><a href="FolderANDCarpetas.aspx">Folder y Carpetas</a></li>
         <li><a href="ForrosEtiquetasTijeras.aspx">Forros,Etiquetas y Tijeras</a></li>
         <li><a href="LapicerosANDPortaminas.aspx">Lpiceros y Portaminas</a></li>

@@ -1,0 +1,18 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="MPArteDiseno.master.cs" Inherits="VictoriaWeb.Arte_y_Diseño.MPArteDiseno" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContenidoMenuContextual" runat="server">
+    <ul id="MenuContextual">
+        <li><a href="Accesorios.aspx">Accesorios</a></li>
+        <li><a href="DibujoIlustracion.aspx">Dibujo e Ilustracion</a></li>
+        <li><a href="PapelArtistico.aspx">Papel Artístico</a></li>
+        <li><a href="Pinceles.aspx">Pinceles</a></li>
+        <li><a href="Pinturas.aspx">Pinturas Artístico</a></li>
+        
+    </ul>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContenidoPrincipal" runat="server">
+    <asp:ContentPlaceHolder ID="ContenidoPrincipal" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</asp:Content>

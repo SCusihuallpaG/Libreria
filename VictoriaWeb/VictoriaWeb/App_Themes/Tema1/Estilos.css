@@ -2,10 +2,10 @@
 }
 #Cabecera {
     height:150px;
-    background-color:#FF7800;
-    color:white;
-    border:1px dashed #A64E06;
-    box-shadow:0px 0px 10px #000;
+    background-color:white;
+    color:#FF9A40;
+    border:0px dashed #A64E06;
+    /*box-shadow:0px 0px 10px #000;*/
     position:relative;
     z-index:2;
 }
@@ -58,6 +58,7 @@
     width:80%;
     float:left;
     text-shadow:2px 2px 3px #000;
+    text-align:center;
 }
     #Titulo > h1{
         margin-top:20px;
@@ -79,12 +80,18 @@
     float:left;
     width:20%;
     min-height:500px;
+    background-color:white;
 }
 
 #MenuContextual {
     list-style-type:none;
     padding:0;
     margin:5px 0;
+    /*transition:all 0.10s ease-out;
+    /*-webkit-transition:all 0.20s linear;
+    -moz-transition:all 0.20s linear;
+    position:relative;*/
+    /*bottom:0;*/
 }
 
    #MenuContextual > li{
@@ -93,7 +100,7 @@
         background-color:#A64E06;
         color:white;
         border:1px outset #A64E06;
-        box-shadow:0px 0px 10px #000 inset;
+        /*box-shadow:0px 0px 10px #000 inset;*/
     }
 
    #MenuContextual > li > a{
@@ -103,7 +110,7 @@
 
 #ColumnCentro {
     float:left;
-    width:60%;
+    width:80%;
     min-height:500px;
     background-color:white;
     box-shadow:0px 0px 5px #000 inset;

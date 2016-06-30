@@ -64,8 +64,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\Tema1\Estilos.css" />
+    <Content Include="Arte y Diseño\Accesorios.aspx" />
+    <Content Include="Arte y Diseño\DibujoIlustracion.aspx" />
+    <Content Include="Arte y Diseño\PapelArtistico.aspx" />
+    <Content Include="Arte y Diseño\Pinceles.aspx" />
+    <Content Include="Arte y Diseño\Pinturas.aspx" />
+    <Content Include="Computo y Electronica\Almacenamiento.aspx" />
+    <Content Include="Computo y Electronica\ArticulosVariosCE.aspx" />
+    <Content Include="Computo y Electronica\AudioVideo.aspx" />
+    <Content Include="Computo y Electronica\Calculadoras.aspx" />
+    <Content Include="Computo y Electronica\ImpresorasTintasTonerCintas.aspx" />
+    <Content Include="Computo y Electronica\Limpieza.aspx" />
+    <Content Include="Computo y Electronica\TecladoMouse.aspx" />
     <Content Include="Default.aspx" />
-    <Content Include="Escolares\ArticulosEscolares.aspx" />
     <Content Include="Escolares\DibujoPintura.aspx" />
     <Content Include="Escolares\FolderANDCarpetas.aspx" />
     <Content Include="Escolares\ForrosEtiquetasTijeras.aspx" />
@@ -73,6 +84,7 @@
     <Content Include="Escolares\MochilasLoncherasCartucheras.aspx" />
     <Content Include="Escolares\PegamentosLimpiatipos.aspx" />
     <Content Include="Escolares\PlastelinasCeramicas.aspx" />
+    <Content Include="Images\Animacion12.jpg" />
     <Content Include="Images\Arte y Diseño\Accesorios\BORRADOR.jpg" />
     <Content Include="Images\Arte y Diseño\Accesorios\ENVASE PARA AGUA.jpg" />
     <Content Include="Images\Arte y Diseño\Accesorios\ENVASE PARA AGUA1.jpg" />
@@ -564,12 +576,10 @@
     <Content Include="Oficina\FormatosAdministrativosyContables.aspx" />
     <Content Include="Oficina\SistemasdeArchivo.aspx" />
     <Content Include="Principal.Master" />
-    <Content Include="Productos\AgregarProductos.aspx" />
-    <Content Include="Productos\DatosProducto.aspx" />
-    <Content Include="Productos\ListaProductos.aspx" />
-    <Content Include="Productos\MPProductos.master" />
     <Content Include="Oficina\MPOficina.master" />
     <Content Include="Escolares\MPEscolares.master" />
+    <Content Include="Arte y Diseño\MPArteDiseno.master" />
+    <Content Include="Computo y Electronica\MPComputoElectronica.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -615,19 +625,110 @@
     <Content Include="Scripts\jquery-1.9.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arte y Diseño\Accesorios.aspx.cs">
+      <DependentUpon>Accesorios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Arte y Diseño\Accesorios.aspx.designer.cs">
+      <DependentUpon>Accesorios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Arte y Diseño\DibujoIlustracion.aspx.cs">
+      <DependentUpon>DibujoIlustracion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Arte y Diseño\DibujoIlustracion.aspx.designer.cs">
+      <DependentUpon>DibujoIlustracion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Arte y Diseño\MPArteDiseno.master.cs">
+      <DependentUpon>MPArteDiseno.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Arte y Diseño\MPArteDiseno.master.designer.cs">
+      <DependentUpon>MPArteDiseno.master</DependentUpon>
+    </Compile>
+    <Compile Include="Arte y Diseño\PapelArtistico.aspx.cs">
+      <DependentUpon>PapelArtistico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Arte y Diseño\PapelArtistico.aspx.designer.cs">
+      <DependentUpon>PapelArtistico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Arte y Diseño\Pinceles.aspx.cs">
+      <DependentUpon>Pinceles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Arte y Diseño\Pinceles.aspx.designer.cs">
+      <DependentUpon>Pinceles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Arte y Diseño\Pinturas.aspx.cs">
+      <DependentUpon>Pinturas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Arte y Diseño\Pinturas.aspx.designer.cs">
+      <DependentUpon>Pinturas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Computo y Electronica\Almacenamiento.aspx.cs">
+      <DependentUpon>Almacenamiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Computo y Electronica\Almacenamiento.aspx.designer.cs">
+      <DependentUpon>Almacenamiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Computo y Electronica\ArticulosVariosCE.aspx.cs">
+      <DependentUpon>ArticulosVariosCE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Computo y Electronica\ArticulosVariosCE.aspx.designer.cs">
+      <DependentUpon>ArticulosVariosCE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Computo y Electronica\AudioVideo.aspx.cs">
+      <DependentUpon>AudioVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Computo y Electronica\AudioVideo.aspx.designer.cs">
+      <DependentUpon>AudioVideo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Computo y Electronica\Calculadoras.aspx.cs">
+      <DependentUpon>Calculadoras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Computo y Electronica\Calculadoras.aspx.designer.cs">
+      <DependentUpon>Calculadoras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Computo y Electronica\ImpresorasTintasTonerCintas.aspx.cs">
+      <DependentUpon>ImpresorasTintasTonerCintas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Computo y Electronica\ImpresorasTintasTonerCintas.aspx.designer.cs">
+      <DependentUpon>ImpresorasTintasTonerCintas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Computo y Electronica\Limpieza.aspx.cs">
+      <DependentUpon>Limpieza.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Computo y Electronica\Limpieza.aspx.designer.cs">
+      <DependentUpon>Limpieza.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Computo y Electronica\MPComputoElectronica.master.cs">
+      <DependentUpon>MPComputoElectronica.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Computo y Electronica\MPComputoElectronica.master.designer.cs">
+      <DependentUpon>MPComputoElectronica.master</DependentUpon>
+    </Compile>
+    <Compile Include="Computo y Electronica\TecladoMouse.aspx.cs">
+      <DependentUpon>TecladoMouse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Computo y Electronica\TecladoMouse.aspx.designer.cs">
+      <DependentUpon>TecladoMouse.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Escolares\ArticulosEscolares.aspx.cs">
-      <DependentUpon>ArticulosEscolares.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Escolares\ArticulosEscolares.aspx.designer.cs">
-      <DependentUpon>ArticulosEscolares.aspx</DependentUpon>
     </Compile>
     <Compile Include="Escolares\DibujoPintura.aspx.cs">
       <DependentUpon>DibujoPintura.aspx</DependentUpon>
@@ -772,34 +873,6 @@
     </Compile>
     <Compile Include="Principal.Master.designer.cs">
       <DependentUpon>Principal.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Productos\AgregarProductos.aspx.cs">
-      <DependentUpon>AgregarProductos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Productos\AgregarProductos.aspx.designer.cs">
-      <DependentUpon>AgregarProductos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Productos\DatosProducto.aspx.cs">
-      <DependentUpon>DatosProducto.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Productos\DatosProducto.aspx.designer.cs">
-      <DependentUpon>DatosProducto.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Productos\ListaProductos.aspx.cs">
-      <DependentUpon>ListaProductos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Productos\ListaProductos.aspx.designer.cs">
-      <DependentUpon>ListaProductos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Productos\MPProductos.master.cs">
-      <DependentUpon>MPProductos.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Productos\MPProductos.master.designer.cs">
-      <DependentUpon>MPProductos.master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

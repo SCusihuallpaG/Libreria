@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace VictoriaWeb.Productos
+namespace VictoriaWeb.Computo_y_Electronica
 {
-    public partial class MPProductos : System.Web.UI.MasterPage
+    public partial class AudioVideo : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace VictoriaWeb.Productos
+namespace VictoriaWeb.Computo_y_Electronica
 {
-    public partial class ListaProductos : System.Web.UI.Page
+    public partial class Calculadoras : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -19,10 +19,11 @@
                 <%--Barra Horizontal --%>
                 <div id="BarraHorizontal">
                     <ul>
-                        <li><a href="/Default.aspx">    Home </a> </li>   
-                        <li><a href="/Productos/AgregarProductos.aspx">Productos</a> </li>
+                        <li><a href="/Default.aspx">    Home </a> </li>
                         <li><a href="/Oficina/ArticulosEscritorio.aspx">Artículos de Oficina</a> </li>
                         <li><a href="/Escolares/DibujoPintura.aspx">Artículos Escolares</a></li>
+                        <li><a href="/Arte y Diseño/Accesorios.aspx">Arte y Diseño</a></li>
+                        <li><a href="/Computo y Electronica/Almacenamiento.aspx">Cómputo y Electrónica</a></li>
                     </ul>
                 </div>      
                 <%--Logotipo--%>
@@ -39,13 +40,15 @@
         <%--Bajo--%>
         <div id="Bajo">
             <%--Columna Izquiera--%>
-            <div id="ColumnIzquierda">                          
+            <div id="ColumnIzquierda"> 
+                                       
                 <asp:ContentPlaceHolder ID="ContenidoMenuContextual" runat="server">
         
                 </asp:ContentPlaceHolder>
             </div>
             <%--Columna Central--%>
             <div id="ColumnCentro">
+                <img src="Images/Animacion12.jpg"width="800" height="500"/>  
                 <asp:ContentPlaceHolder ID="ContenidoPrincipal" runat="server">
         
                 </asp:ContentPlaceHolder>
